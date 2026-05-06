@@ -1,4 +1,3 @@
-version: "3"
 services:
   # Nuxt NODE process
   nuxt-basic-frontend:
