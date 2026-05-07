@@ -6,7 +6,5 @@ services:
       context: .
       dockerfile: ./deploy/development/node/Dockerfile
     image: nuxt-basic-frontend
-    volumes:
-      - ./:/app
     ports:
       - "${PORT:-3002}:3000"
