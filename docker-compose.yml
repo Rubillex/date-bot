@@ -8,6 +8,8 @@ services:
     image: nuxt-basic-frontend
     ports:
       - "${PORT:-3002}:3000"
+    networks:
+      - remnawave-network
 
 networks:
   remnawave-network:
