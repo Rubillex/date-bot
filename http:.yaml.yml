@@ -1,22 +1,15 @@
 http:
   routers:
-    remnawave:
-      rule: "Host(`rubillex.ru`)"
+    date-bot:
+      rule: "Host(`rubillex.tech`)"
       entrypoints:
         - https
-      middlewares:
-        - remnawave-https-redirect
       tls:
         certResolver: letsencrypt
-      service: remnawave
-
-  middlewares:
-    remnawave-https-redirect:
-      redirectScheme:
-        scheme: https
+      service: nuxt-basic-frontend
 
   services:
-    remnawave:
+    nuxt-basic-frontend:
       loadBalancer:
         servers:
-          - url: "http://remnawave:3000"
+          - url: "http://0.0.0.0:3002"
