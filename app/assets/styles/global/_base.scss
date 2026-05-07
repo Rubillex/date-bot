@@ -1,0 +1,229 @@
+@use "../collection/colors" as *;
+@use "../collection/fonts" as *;
+@use "../collection/mixins" as *;
+@use "../collection/functions" as *;
+@use "../collection/vars" as *;
+@use "../collection/medias" as *;
+@use "../collection/animations" as *;
+
+html {
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
+
+  ::selection {
+    background-color: $bg-secondary;
+  }
+
+  background: #f7eee4;
+}
+
+body {
+  color: $text-main;
+  font-family: $ff-inter;
+  background-color: $bg-main;
+
+  &.unscrollable {
+    width: 100vw;
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+  }
+}
+
+button {
+  font-family: inherit;
+  background-color: transparent;
+}
+
+svg {
+  flex-shrink: 0;
+}
+
+// BASE UTILITIES
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.untouchable {
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.fit-content {
+  width: fit-content;
+}
+
+// BASE LAYOUT
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 responsive(16, 24, 80);
+}
+
+// BASE TYPOGRAPHY
+
+.heading-base-1 {
+  font-weight: $fw-medium;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+
+  @include responsiveFontSize(40, 48, 56);
+}
+
+.heading-base-2 {
+  line-height: 130%;
+  letter-spacing: 0.01em;
+
+  @include responsiveFontSize(20, 24, 28);
+
+  @include tablet-large {
+    font-weight: $fw-medium;
+  }
+}
+
+.heading-accent-1 {
+  font-weight: $fw-regular;
+  font-family: $ff-quincy-cf;
+  line-height: 100%;
+
+  @include responsiveFontSize(16, 20, 24);
+}
+
+.heading-accent-2 {
+  font-weight: $fw-regular;
+  font-family: $ff-quincy-cf;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+
+  @include responsiveFontSize(16, 16, 20);
+}
+
+.title-1 {
+  font-weight: $fw-regular;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+
+  @include responsiveFontSize(14, 16, 16);
+}
+
+.title-1-bold {
+  font-weight: $fw-medium;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+
+  @include responsiveFontSize(24, 24, 24);
+}
+
+.body-1 {
+  font-weight: $fw-regular;
+  line-height: 135%;
+  letter-spacing: 0.03em;
+
+  @include responsiveFontSize(12, 14, 14);
+}
+
+.body-1-bold {
+  font-weight: $fw-medium;
+  line-height: 135%;
+  letter-spacing: 0.03em;
+
+  @include responsiveFontSize(12, 14, 14);
+}
+
+.body-2 {
+  font-weight: $fw-regular;
+  line-height: 135%;
+  letter-spacing: 0.03em;
+
+  @include responsiveFontSize(14, 14, 14);
+}
+
+.caption-1 {
+  font-weight: $fw-regular;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+
+  @include responsiveFontSize(12, 12, 12);
+}
+
+.caption-2 {
+  font-weight: $fw-regular;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+
+  @include responsiveFontSize(12, 12, 12);
+}
+
+.subtitle-1 {
+  font-weight: $fw-semibold;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  @include responsiveFontSize(16, 14, 14);
+}
+
+.subtitle-2 {
+  font-weight: $fw-regular;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  @include responsiveFontSize(10, 12, 12);
+}
+
+.button-1 {
+  font-weight: $fw-medium;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+
+  @include responsiveFontSize(12, 12, 12);
+}
+
+// BASE SCROLLBAR
+
+.firefox,
+.firefox * {
+  scrollbar-color: $scrollbar-thumb $scrollbar-track;
+  scrollbar-width: thin;
+}
+
+:not(.chromium, .firefox),
+.chromium,
+.chromium * {
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $scrollbar-thumb;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: color-mix(in srgb, $scrollbar-thumb, black 10%);
+    }
+
+    &:active {
+      background-color: color-mix(in srgb, $scrollbar-thumb, black 20%);
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $scrollbar-track;
+  }
+}

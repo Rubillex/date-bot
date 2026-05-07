@@ -1,0 +1,54 @@
+@use 'sass:math';
+
+@function px-to-rem($font-size) {
+    $remValue: calc($font-size / 16) + rem;
+
+    @return $remValue;
+}
+
+@function px-to-vw($px, $width: 1920) {
+    @return calc($px / $width) * 100vw;
+}
+
+@function responsive($sm, $lg: null, $xxl: null) {
+    @if not($lg) and not($xxl) {
+        @return max(px-to-vw($sm), #{$sm}px);
+    }
+
+    @if not($xxl) {
+        $xxl: $lg;
+        $lg: math.div(($sm * 1440) + ($lg * 1920), 1440 + 1920);
+    }
+
+    // xxl..inf
+    $wider-part: max(px-to-vw($xxl), #{$xxl}px);
+
+    // lg..xxl
+    $bigger-part: clamp(
+        #{$lg}px,
+        #{$lg}px + (100vw - 1440px) * #{$xxl - $lg} / (1920 - 1440),
+        #{$xxl}px
+    );
+
+    // 0..lg
+    $smaller-part: min(#{$sm}px + (100vw - 375px) * #{$lg - $sm} / (1440 - 375), #{$lg}px);
+
+    // компенсации, чтобы при конкретном размере экрана действовал только один part (media queries курильщика)
+    $wider-compensate: calc(
+        clamp(0px, 1920px - 100vw, 1px) * $xxl
+    ); // xxl если меньше 1920, иначе 0
+    $smaller-compensate: calc(
+        clamp(0px, 100vw - 1440px, 1px) * $lg
+    ); // lg если больше 1440, иначе 0
+    $bigger-compensate-up: calc(
+        clamp(0px, 100vw - 1919px, 1px) * $xxl
+    ); // xxl если больше 1920, иначе 0
+    $bigger-compensate-down: calc(
+        clamp(0px, 1441px - 100vw, 1px) * $lg
+    ); // lg если меньше 1440, иначе 0
+
+    @return calc(
+        $smaller-part - $smaller-compensate + $bigger-part - $bigger-compensate-up -
+            $bigger-compensate-down + $wider-part - $wider-compensate
+    );
+}

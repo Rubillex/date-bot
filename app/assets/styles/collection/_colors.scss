@@ -1,0 +1,66 @@
+:root {
+    --brown-100: #bd9e6e;
+    --ai-gradient-light: #b68f7d;
+    --brown-200: #bdb7ac;
+    --brown-300: #a6968e;
+    --brown-400: #947e73;
+    --brown-500: #745b4e;
+    --brown-600: #503f37;
+    --green-100: #08a462;
+    --red-100: #df2d2d;
+    --gray-100: #e8e4de;
+    --gray-200: #f2f2f2;
+    --white: #fbfaf9;
+}
+
+// background
+$bg-accent: var(--brown-100);
+$bg-disabled: var(--brown-400);
+$bg-error: var(--red-100);
+$bg-main: var(--white);
+$bg-main-inverse: var(--brown-500);
+$bg-main-transparent-30: rgb(from var(--white) r g b / 30%);
+$bg-main-transparent-5: rgb(from var(--white) r g b / 5%);
+$bg-secondary: var(--gray-100);
+$bg-secondary-inverse: var(--brown-600);
+
+// bodrer
+$border-disabled-main: var(--gray-100);
+$border-disabled-secondary: var(--brown-200);
+$border-error: var(--red-100);
+$border-inverse: var(--brown-600);
+$border-inverse-secondary: var(--brown-500);
+$border-main: var(--white);
+$border-main-transparent-60: rgb(from var(--white) r g b / 60%);
+$border-success: var(--green-100);
+
+// button
+$button-primary-default: var(--brown-500);
+$button-primary-disabled: var(--brown-400);
+$button-primary-hover: var(--brown-600);
+$button-secondary-default: var(--gray-100);
+$button-secondary-disabled: rgb(from var(--brown-200) r g b / 50%);
+$button-secondary-hover: var(--brown-200);
+
+// text
+$text-accent: var(--brown-100);
+$text-error: var(--red-100);
+$text-inverse: var(--white);
+$text-inverse-secondary: var(--brown-200);
+$text-inverse-transparent-30: rgb(from var(--white) r g b / 30%);
+$text-inverse-transparent-60: rgb(from var(--white) r g b / 60%);
+$text-main: var(--brown-600);
+$text-secondary: var(--brown-500);
+$text-success: var(--green-100);
+$text-tertiary: var(--brown-400);
+$text-banner: var(--gray-200);
+
+// overlays
+$overlay-main: rgb(from #2e2e2e r g b / 50%);
+
+// scrollbar
+$scrollbar-track: var(--gray-100);
+$scrollbar-thumb: var(--brown-200);
+
+// AI
+$ai-gradient-light: var(--ai-gradient-light);

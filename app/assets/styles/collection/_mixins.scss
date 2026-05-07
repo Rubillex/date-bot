@@ -1,0 +1,51 @@
+@use './functions' as *;
+@use './medias' as *;
+
+@mixin font($size, $weight: null, $color: null, $height: null) {
+    font-size: px-to-rem($size);
+
+    @if $weight {
+        font-weight: $weight;
+    }
+
+    @if $color {
+        color: $color;
+    }
+
+    @if $height {
+        line-height: $height;
+    }
+}
+
+@mixin placeOutsideContainer($containerPadding: 16px) {
+    width: calc(100% + 2 * $containerPadding);
+    margin-left: calc(-1 * $containerPadding);
+}
+
+@mixin lineclamp($lines) {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    overflow-wrap: anywhere;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+}
+
+// example: @mixin transition((background-color, color), 0.5s, ease);
+@mixin transition($properties: (), $duration: 0.3s, $timing-function: ease-in-out) {
+    transition-timing-function: $timing-function;
+    transition-duration: $duration;
+    transition-property: $properties;
+}
+
+@mixin responsiveFontSize($sm, $lg, $xxl) {
+    font-size: calc(#{$sm}px + (100vw - 375px) * #{$lg - $sm} / (1440 - 375));
+
+    @include laptop-medium {
+        font-size: calc(#{$lg}px + (100vw - 1440px) * #{$xxl - $lg} / (1920 - 1440));
+    }
+
+    @include desktop {
+        font-size: px-to-vw($xxl);
+    }
+}
