@@ -69,7 +69,7 @@
     </p>
 
     <button
-      class="primary-button"
+      class="primary-button floating-button"
       type="button"
       :disabled="isSending || !selectedCount"
       @click="emit('submit')"
@@ -113,6 +113,19 @@ const buttonText = computed(() => {
     return "Выбери хотя бы один пункт";
   }
 
-  return "Отправить и смотреть совпадения";
+  return "Соханить смотреть совпадения";
 });
 </script>
+
+<style lang="scss">
+.floating-button {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.menu-screen {
+  position: relative;
+}
+</style>
