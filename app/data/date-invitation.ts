@@ -49,193 +49,208 @@ export const restaurants: Restaurant[] = [
       {
         id: "cheesus-salat-s-tigrovymi-krevetkami-i-krasnoj-ikroj",
         name: "Салат с тигровыми креветками, перепелиным яйцом и эдамаме",
-        description: "Огурцы, креветки, авокадо, соус пекантный, яйца перепелиные, бобы эдамаме, масло подсолнечное, соус песто, каперсы, масло чесночное, микрозелень рукола, соль",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/CB9EEAD8-30F3-40F7-A2AE-3459FC6257A8.webp",
-        partnerWants: false
+        description:
+          "Огурцы, креветки, авокадо, соус пекантный, яйца перепелиные, бобы эдамаме, масло подсолнечное, соус песто, каперсы, масло чесночное, микрозелень рукола, соль",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/CB9EEAD8-30F3-40F7-A2AE-3459FC6257A8.webp",
+        partnerWants: false,
       },
       {
         id: "cheesus-zelyonyj-salat-s-zapravkoj-lajmovo-gorchichnoj-zapravkoj",
         name: "Зелёный салат с лаймово-горчичной заправкой",
-        description: "Авокадо, огурцы, цукини, лаймово-горчичная заправка, салат романо, салат фриллис, шпинат мини, семена чиа, микрозелень рукола",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/4597D355-500E-453E-80BA-295A9669D6EC.webp",
-        partnerWants: false
+        description:
+          "Авокадо, огурцы, цукини, лаймово-горчичная заправка, салат романо, салат фриллис, шпинат мини, семена чиа, микрозелень рукола",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/4597D355-500E-453E-80BA-295A9669D6EC.webp",
+        partnerWants: false,
       },
       {
         id: "cheesus-salat-s-rostbifom",
         name: "Зелёный салат с ростбифом и черри",
-        description: "Ростбиф, заправка, салат лолло бьонда, томаты черри, чиабатта, салат лолло росса, масло оливковое, каперсы, микрозелень рукола",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/9A31A8A3-92F1-4A26-B56E-0BA1E0153E95?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2362556494&Signature=mOdkIWcA4Sly2%2FZRamXOtZkU2iQ%3D",
-        partnerWants: false
+        description:
+          "Ростбиф, заправка, салат лолло бьонда, томаты черри, чиабатта, салат лолло росса, масло оливковое, каперсы, микрозелень рукола",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/9A31A8A3-92F1-4A26-B56E-0BA1E0153E95?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2362556494&Signature=mOdkIWcA4Sly2%2FZRamXOtZkU2iQ%3D",
+        partnerWants: false,
       },
       {
         id: "cheesus-salat-grecheskij",
         name: "Салат греческий",
-        description: "Сыр фета, томаты черри, огурцы, перец болгарский, оливки, соус песто, лимоны, салат романо, лук красный, масло оливковое, микрозелень рукола, специи",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/575EFAEF-38AC-4698-A395-8956AB0DBBC6.webp",
-        partnerWants: false
+        description:
+          "Сыр фета, томаты черри, огурцы, перец болгарский, оливки, соус песто, лимоны, салат романо, лук красный, масло оливковое, микрозелень рукола, специи",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/575EFAEF-38AC-4698-A395-8956AB0DBBC6.webp",
+        partnerWants: false,
       },
       {
         id: "cheesus-cezar-s-krevetkami",
         name: "Цезарь с тигровыми креветками",
-        description: "Креветки, соус цезарь, салат романо, яйцо куриное, томаты черри, чиабатта, масло оливковое, сыр пармезан, масло подсолнечное, микрозелень рукола",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/4E9F0EFD-1FD0-4C84-B29B-6B6BEF8068DC.webp",
-        partnerWants: false
+        description:
+          "Креветки, соус цезарь, салат романо, яйцо куриное, томаты черри, чиабатта, масло оливковое, сыр пармезан, масло подсолнечное, микрозелень рукола",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/4E9F0EFD-1FD0-4C84-B29B-6B6BEF8068DC.webp",
+        partnerWants: false,
       },
       {
         id: "cheesus-cezar-s-kuricej",
         name: "Цезарь с куриной грудкой су-вид",
-        description: "Соус цезарь, салат романо, яйцо куриное, куриное филе су-вид, томаты черри, чиабатта, сыр пармезан, масло оливковое, микрозелень рукола",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/71524577-7322-4E19-8E62-C2DC8AFDF84D.webp",
-        partnerWants: false
+        description:
+          "Соус цезарь, салат романо, яйцо куриное, куриное филе су-вид, томаты черри, чиабатта, сыр пармезан, масло оливковое, микрозелень рукола",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/71524577-7322-4E19-8E62-C2DC8AFDF84D.webp",
+        partnerWants: false,
       },
       {
         id: "cheesus-karbonara",
         name: "Паста карбонара",
-        description: "Соус сливочный альфредо, спагетти, бекон варёно-копчёный, яйца куриные, сыр пармезан, масло оливковое, ростки подсолнуха, специи, масло растительное, чеснок, микрозелень базилик",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/B51EA5C7-056F-4F37-B0BA-652BED4E92FB.webp",
-        partnerWants: false
+        description:
+          "Соус сливочный альфредо, спагетти, бекон варёно-копчёный, яйца куриные, сыр пармезан, масло оливковое, ростки подсолнуха, специи, масло растительное, чеснок, микрозелень базилик",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/B51EA5C7-056F-4F37-B0BA-652BED4E92FB.webp",
+        partnerWants: true,
       },
       {
         id: "cheesus-spagetti-s-bekonom-v-slivochno-tomatnom-souse",
         name: "Спагетти с беконом в сливочно-томатном соусе",
         description: "Спагетти, бекон варёно-копчёный",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/553C2D52-B591-4C44-9DFE-1264BFD91D38.webp",
-        partnerWants: false
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/553C2D52-B591-4C44-9DFE-1264BFD91D38.webp",
+        partnerWants: false,
       },
       {
         id: "cheesus-spagetti-s-moreproduktami-v-slivochno-ikornom-souse",
         name: "Спагетти с морепродуктами в сливочно-икорном соусе",
-        description: "Соус сливочный альфредо, спагетти, кальмары, креветки, сыр пармезан, икра палтуса, масло оливковое, икра лососевая, ростки подсолнуха, масло чесночное, лук-сибулет, соль, хондаши, микрозелень базилик",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/BA8189A4-2AF9-47D1-9662-F741C2B2923C.webp",
-        partnerWants: false
+        description:
+          "Соус сливочный альфредо, спагетти, кальмары, креветки, сыр пармезан, икра палтуса, масло оливковое, икра лососевая, ростки подсолнуха, масло чесночное, лук-сибулет, соль, хондаши, микрозелень базилик",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/BA8189A4-2AF9-47D1-9662-F741C2B2923C.webp",
+        partnerWants: false,
       },
       {
         id: "cheesus-lazanya-boloneze",
         name: "Лазанья болоньезе",
         description: "Лазанья",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/9E912FAE-5F4E-4A49-A6A9-858B1429229F.webp",
-        partnerWants: false
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/9E912FAE-5F4E-4A49-A6A9-858B1429229F.webp",
+        partnerWants: false,
       },
       {
         id: "cheesus-pasta-s-krevetkami-bisk",
         name: "Паста с креветками биск",
-        description: "Паста меззе, соус биск, креветки, томаты черри, масло растительное, шпинат, каперсы фри, лук-сибулет",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/E8BB66C1-1FD5-48A0-9189-FE411CBF700C.webp",
-        partnerWants: false
+        description:
+          "Паста меззе, соус биск, креветки, томаты черри, масло растительное, шпинат, каперсы фри, лук-сибулет",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/E8BB66C1-1FD5-48A0-9189-FE411CBF700C.webp",
+        partnerWants: true,
       },
       {
         id: "cheesus-boloneze-emiliya-romanya",
         name: "Болоньезе Эмилия-Романья",
         description: "Соус болоньезе",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/451A633B-4E12-4A0C-9AFF-26F9DF95E89F.webp",
-        partnerWants: false
-      },
-      {
-        id: "cheesus-5-xitov-peperoni-piczcza-chorizo-s-percem-xalapeno-kaprichoza-piczcza-s-proshutto-i-korolevskimi-sha",
-        name: "Комбо «5 хитов»",
-        description: "Пицца Пеперони, пицца с прошутто и королевскими шампиньонами, пицца Капричоза, пицца Маргарита, пицца Чоризо с перцем Халапеньо",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/74D3D2F0-2BF0-40A7-94E0-AB0C8A20D29B.jpg",
-        partnerWants: false
-      },
-      {
-        id: "cheesus-ofis-pati-peperoni-piczcza-s-proshutto-i-korolevskimi-shampinonami-kaprichoza",
-        name: "Комбо «Офис-пати»",
-        description: "Пицца Пеперони, пицца с прошутто и королевскими шампиньонами, пицца Капричоза",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/7447BB81-954F-4AFD-A83F-A83D99C9ED0C.jpg",
-        partnerWants: false
-      },
-      {
-        id: "cheesus-klassnaya-para-piczcza-s-proshutto-i-korolevskimi-shampinonami-piczcza-karbonara",
-        name: "Комбо «Классная пара»",
-        description: "Пицца с прошутто и королевскими шампиньонами, пицца Карбонара",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/AA96E3AD-B2BE-44C3-A49B-FB3F83116307.jpg",
-        partnerWants: false
-      },
-      {
-        id: "cheesus-bestsellery-margarita-peperoni",
-        name: "Комбо «Бестселлеры»",
-        description: "Пицца Маргарита, пицца Пеперони",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/4E63FE70-D3D6-4954-BF43-06325EAEBF07.jpg",
-        partnerWants: false
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/451A633B-4E12-4A0C-9AFF-26F9DF95E89F.webp",
+        partnerWants: false,
       },
       {
         id: "cheesus-piczcza-chorizo-s-percem-xalapeno",
         name: "Пицца Чоризо с перцем Халапеньо",
-        description: "Тесто для пиццы, сыр моцарелла, соус томатный, колбаса чоризо, мука из твердых сортов пшеницы, перец халапеньо маринованный, масло подсолнечное, масло базилик, масло шрирача, соус трюфельный",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/9AF167A0-D7BB-496A-A27E-9C32B886F50C.webp",
-        partnerWants: false
+        description:
+          "Тесто для пиццы, сыр моцарелла, соус томатный, колбаса чоризо, мука из твердых сортов пшеницы, перец халапеньо маринованный, масло подсолнечное, масло базилик, масло шрирача, соус трюфельный",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/9AF167A0-D7BB-496A-A27E-9C32B886F50C.webp",
+        partnerWants: false,
       },
       {
         id: "cheesus-piczcza-kaprichoza",
         name: "Пицца Капричоза",
-        description: "Тесто для пиццы, сыр моцарелла, соус томатный, мортаделла, колбаса чоризо, перец сладкий в уксусе, мука из твердых сортов пшеницы, томаты вяленые, оливки, сыр пармезан, каперсы, масло подсолнечное, масло базилик, соус трюфельный",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/1BCE3D35-945A-4BF0-8409-18A5E94E5880.webp",
-        partnerWants: false
+        description:
+          "Тесто для пиццы, сыр моцарелла, соус томатный, мортаделла, колбаса чоризо, перец сладкий в уксусе, мука из твердых сортов пшеницы, томаты вяленые, оливки, сыр пармезан, каперсы, масло подсолнечное, масло базилик, соус трюфельный",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/1BCE3D35-945A-4BF0-8409-18A5E94E5880.webp",
+        partnerWants: false,
       },
       {
         id: "cheesus-piczcza-fruti-di-mare",
         name: "Пицца Фрути ди маре",
-        description: "Тесто для пиццы, сыр моцарелла, соус томатный, креветки, кальмары, морской гребешок, мука из твердых сортов пшеницы, масло подсолнечное, каперсы, масло базилик, масло чесночное, соль, соус трюфельный",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/EEFAB8F5-1A77-47CC-8C4E-FBC8DAAB777D.webp",
-        partnerWants: false
+        description:
+          "Тесто для пиццы, сыр моцарелла, соус томатный, креветки, кальмары, морской гребешок, мука из твердых сортов пшеницы, масло подсолнечное, каперсы, масло базилик, масло чесночное, соль, соус трюфельный",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/EEFAB8F5-1A77-47CC-8C4E-FBC8DAAB777D.webp",
+        partnerWants: false,
       },
       {
         id: "cheesus-fokachcha-s-parmezanom",
         name: "Фокачча с пармезаном",
-        description: "Тесто для пиццы, мука из твердых сортов пшеницы, сыр пармезан, масло оливковое, тимьян",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/FB9223C7-9C5F-4273-9AEA-433194C7B4A2.webp",
-        partnerWants: false
+        description:
+          "Тесто для пиццы, мука из твердых сортов пшеницы, сыр пармезан, масло оливковое, тимьян",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/FB9223C7-9C5F-4273-9AEA-433194C7B4A2.webp",
+        partnerWants: false,
       },
       {
         id: "cheesus-piczcza-s-mortadelloj",
         name: "Пицца с мортаделлой",
-        description: "Тесто для пиццы, соус сливочный, сыр моцарелла, мортаделла, сыр страчателла, мука из твердых сортов пшеницы, масло трюфельное, масло подсолнечное, приправа 4 перца, соус трюфельный",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/1C5DE7D8-9B73-482A-A851-5BB673A0957F.webp",
-        partnerWants: false
+        description:
+          "Тесто для пиццы, соус сливочный, сыр моцарелла, мортаделла, сыр страчателла, мука из твердых сортов пшеницы, масло трюфельное, масло подсолнечное, приправа 4 перца, соус трюфельный",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/1C5DE7D8-9B73-482A-A851-5BB673A0957F.webp",
+        partnerWants: false,
       },
       {
         id: "cheesus-piczcza-margarita-2",
         name: "Пицца Маргарита",
-        description: "Тесто для пиццы, сыр моцарелла, соус томатный, мука из твердых сортов пшеницы, масло подсолнечное, орегано, соус трюфельный",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/8B761CF7-F442-4B3E-9209-6231CF96CE06?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2362555965&Signature=XwZPRes%2FLHZJz6oho3%2Fu1JjbOlQ%3D",
-        partnerWants: false
+        description:
+          "Тесто для пиццы, сыр моцарелла, соус томатный, мука из твердых сортов пшеницы, масло подсолнечное, орегано, соус трюфельный",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/8B761CF7-F442-4B3E-9209-6231CF96CE06?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2362555965&Signature=XwZPRes%2FLHZJz6oho3%2Fu1JjbOlQ%3D",
+        partnerWants: false,
       },
       {
         id: "cheesus-piczcza-s-grushej-i-dorblyu",
         name: "Пицца с грушей и Дорблю",
-        description: "Тесто для пиццы, сыр моцарелла, груша, соус сливочный, сыр с голубой плесенью, сливки, мука из твердых сортов пшеницы, орех грецкий карамелизированный, масло подсолнечное, сахар тростниковый, соус трюфельный",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/DB5C2DD3-F78B-424E-8138-946F199BAEEC?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2370929751&Signature=S9sP9N%2B9cb2%2FaJUgDftmAgrcMMg%3D",
-        partnerWants: false
+        description:
+          "Тесто для пиццы, сыр моцарелла, груша, соус сливочный, сыр с голубой плесенью, сливки, мука из твердых сортов пшеницы, орех грецкий карамелизированный, масло подсолнечное, сахар тростниковый, соус трюфельный",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/DB5C2DD3-F78B-424E-8138-946F199BAEEC?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2370929751&Signature=S9sP9N%2B9cb2%2FaJUgDftmAgrcMMg%3D",
+        partnerWants: false,
       },
       {
         id: "cheesus-piczcza-pepperoni-2",
         name: "Пицца Пеперони",
-        description: "Тесто для пиццы, сыр моцарелла, соус томатный, колбаса пепперони, мука из твердых сортов пшеницы, масло подсолнечное, микрозелень рукола, орегано, соус трюфельный",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/932AF3E3-382E-4405-BCDC-A369783020A4?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2362556019&Signature=mKeUT4OkgDpYsqkhcc6E2mAd00U%3D",
-        partnerWants: false
+        description:
+          "Тесто для пиццы, сыр моцарелла, соус томатный, колбаса пепперони, мука из твердых сортов пшеницы, масло подсолнечное, микрозелень рукола, орегано, соус трюфельный",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/932AF3E3-382E-4405-BCDC-A369783020A4?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2362556019&Signature=mKeUT4OkgDpYsqkhcc6E2mAd00U%3D",
+        partnerWants: true,
       },
       {
         id: "cheesus-piczcza-karbonara",
         name: "Пицца Карбонара",
-        description: "Тесто для пиццы, сыр моцарелла, соус сливочный, бекон варёно-копчёный, лук красный, мука из твердых сортов пшеницы, сыр пармезан, масло подсолнечное, смесь перцев, соус трюфельный",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/7B5F8B45-FDD8-4B78-ACD2-E27A74964344?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2393929406&Signature=iMjsOmgmZ8JcFRiAInAW4isdSCc%3D",
-        partnerWants: false
+        description:
+          "Тесто для пиццы, сыр моцарелла, соус сливочный, бекон варёно-копчёный, лук красный, мука из твердых сортов пшеницы, сыр пармезан, масло подсолнечное, смесь перцев, соус трюфельный",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/7B5F8B45-FDD8-4B78-ACD2-E27A74964344?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2393929406&Signature=iMjsOmgmZ8JcFRiAInAW4isdSCc%3D",
+        partnerWants: false,
       },
       {
         id: "cheesus-piczcza-s-proshutto-i-korolevskimi-shampinonami",
         name: "Пицца с прошутто и королевскими шампиньонами",
-        description: "Тесто для пиццы, сыр моцарелла, соус томатный, ветчина прошутто, грибы шампиньоны королевские, мука из твердых сортов пшеницы, сыр пармезан, масло подсолнечное, масло трюфельное, микрозелень рукола, соус трюфельный",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/8144A4A9-FA7D-416C-82D6-FCB13E0BF263?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2376479561&Signature=YCejelBAqAI5PdBb5OeDPF6gAuQ%3D",
-        partnerWants: false
+        description:
+          "Тесто для пиццы, сыр моцарелла, соус томатный, ветчина прошутто, грибы шампиньоны королевские, мука из твердых сортов пшеницы, сыр пармезан, масло подсолнечное, масло трюфельное, микрозелень рукола, соус трюфельный",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/8144A4A9-FA7D-416C-82D6-FCB13E0BF263?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2376479561&Signature=YCejelBAqAI5PdBb5OeDPF6gAuQ%3D",
+        partnerWants: false,
       },
       {
         id: "cheesus-piczcza-kvatro-formadzho",
         name: "Пицца четыре сыра",
-        description: "Тесто для пиццы, сыр моцарелла, соус сливочный, сыр с голубой плесенью, сливки, сыр с белой плесенью, мука из твердых сортов пшеницы, сыр пармезан, масло подсолнечное, масло трюфельное, шалфей фри соус трюфельный",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/FFE841C6-3158-45F7-96C0-682E481A6422?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2368775620&Signature=qTfxAoHzWp%2B9Kv9kD%2Blse7sIqM0%3D",
-        partnerWants: false
-      }
-    ]
+        description:
+          "Тесто для пиццы, сыр моцарелла, соус сливочный, сыр с голубой плесенью, сливки, сыр с белой плесенью, мука из твердых сортов пшеницы, сыр пармезан, масло подсолнечное, масло трюфельное, шалфей фри соус трюфельный",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/FFE841C6-3158-45F7-96C0-682E481A6422?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2368775620&Signature=qTfxAoHzWp%2B9Kv9kD%2Blse7sIqM0%3D",
+        partnerWants: false,
+      },
+    ],
   },
   {
     id: "gimnasia",
@@ -244,179 +259,226 @@ export const restaurants: Restaurant[] = [
       {
         id: "gimnasia-spring-rolly-assorti",
         name: "Спринг-роллы ассорти",
-        description: "Соус чили-орех, рисовая бумага, огурцы, дайкон, салат ромейн, перец болгарский, креветки, лосось, угорь копчёный, фурикакэ кунжутный",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/7BF9F242-A14E-4A79-A964-A4FE7D80636E.webp",
-        partnerWants: false
+        description:
+          "Соус чили-орех, рисовая бумага, огурцы, дайкон, салат ромейн, перец болгарский, креветки, лосось, угорь копчёный, фурикакэ кунжутный",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/7BF9F242-A14E-4A79-A964-A4FE7D80636E.webp",
+        partnerWants: false,
       },
       {
         id: "gimnasia-baklazhany-fri-s-pomidorami-i-lukom-2",
         name: "Баклажаны фри с томатами в соусе чили",
-        description: "Баклажаны фри, томаты черри, соус сладкий чили, лук репчатый, соус соевый, масло растительное, лук зеленый, кинза, кунжут",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/A68BC6C8-C454-4E5F-AB4A-364F582A4BB3?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2370936005&Signature=mm4GchzyJrf7TX3Uo8X0lT87W5E%3D",
-        partnerWants: false
+        description:
+          "Баклажаны фри, томаты черри, соус сладкий чили, лук репчатый, соус соевый, масло растительное, лук зеленый, кинза, кунжут",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/A68BC6C8-C454-4E5F-AB4A-364F582A4BB3?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2370936005&Signature=mm4GchzyJrf7TX3Uo8X0lT87W5E%3D",
+        partnerWants: false,
       },
       {
         id: "gimnasia-tartar-iz-tuncza1",
         name: "Тартар из тунца",
-        description: "Тунец, авокадо, перец острый, мини шпинат, соус унаги, масло оливковое",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/482032DD-5CAB-4BFF-A6DB-F903027ED462?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2389077726&Signature=%2FaUK%2BElyhKh3uYGsWUQVgCFEUZc%3D",
-        partnerWants: false
+        description:
+          "Тунец, авокадо, перец острый, мини шпинат, соус унаги, масло оливковое",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/482032DD-5CAB-4BFF-A6DB-F903027ED462?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2389077726&Signature=%2FaUK%2BElyhKh3uYGsWUQVgCFEUZc%3D",
+        partnerWants: false,
       },
       {
         id: "gimnasia-tartar-iz-lososya-1",
         name: "Тартар из лосося",
-        description: "Охлажденный лосось, сальса из авокадо, шпинат, лайм и соус унаги.",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/4CD9E869-ECE5-4585-BCA2-8A1276E72BE8?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2370936516&Signature=AgoRd%2B2XpWTEppKCyUOZt7xo3u0%3D",
-        partnerWants: false
+        description:
+          "Охлажденный лосось, сальса из авокадо, шпинат, лайм и соус унаги.",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/4CD9E869-ECE5-4585-BCA2-8A1276E72BE8?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2370936516&Signature=AgoRd%2B2XpWTEppKCyUOZt7xo3u0%3D",
+        partnerWants: false,
       },
       {
         id: "gimnasia-malajzijskij-sup-laksa-s-cyplyonkom",
         name: "Малайзийский суп лакса с цыплёнком",
-        description: "Бульон лакса, лапша пшеничная, яйцо маринованное, куриное филе су-вид, масло с перцем и кунжутом, соус терияки, лук-сибулет",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/56A80735-5942-4262-9972-3F5D490448D3.webp",
-        partnerWants: false
+        description:
+          "Бульон лакса, лапша пшеничная, яйцо маринованное, куриное филе су-вид, масло с перцем и кунжутом, соус терияки, лук-сибулет",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/56A80735-5942-4262-9972-3F5D490448D3.webp",
+        partnerWants: false,
       },
       {
         id: "gimnasia-tom-kxa",
         name: "Том Ям с курицей",
-        description: "Бульон Том ям, рис отварной, курица карааге, грибы вешенки, томаты черри, лайм, лук зелёный, кинза",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/D80274F5-4BF9-4507-8B2A-DF12703D5A77.webp",
-        partnerWants: false
+        description:
+          "Бульон Том ям, рис отварной, курица карааге, грибы вешенки, томаты черри, лайм, лук зелёный, кинза",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/D80274F5-4BF9-4507-8B2A-DF12703D5A77.webp",
+        partnerWants: false,
       },
       {
         id: "gimnasia-tom-yam-1",
         name: "Том Ям с морепродуктами",
-        description: "Бульон Том ям, рис отварной, креветки, грибы вешенки, кальмары, томаты черри, лайм, лук-порей, кинза",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/2879A508-16A6-4F63-8967-BD49FC6F35A7.webp",
-        partnerWants: false
+        description:
+          "Бульон Том ям, рис отварной, креветки, грибы вешенки, кальмары, томаты черри, лайм, лук-порей, кинза",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/2879A508-16A6-4F63-8967-BD49FC6F35A7.webp",
+        partnerWants: false,
       },
       {
         id: "gimnasia-ris-s-kuricej-v-kislo-sladkom-souse",
         name: "Рис с курицей в кисло-сладком соусе",
-        description: "Куриное бедро маринованное, рис, соус кисло-сладкий, перец болгарский, крахмал кукурузный, масло растительное, лук зеленый, масло фритюрное, кунжут, кинза",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/2C9AC04F-0FA4-4877-8E1F-1FDC40D541E5?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355430801&Signature=AF1Pg%2BPJGqStyMfp87KZ4lP4SiQ%3D",
-        partnerWants: false
+        description:
+          "Куриное бедро маринованное, рис, соус кисло-сладкий, перец болгарский, крахмал кукурузный, масло растительное, лук зеленый, масло фритюрное, кунжут, кинза",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/2C9AC04F-0FA4-4877-8E1F-1FDC40D541E5?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355430801&Signature=AF1Pg%2BPJGqStyMfp87KZ4lP4SiQ%3D",
+        partnerWants: false,
       },
       {
         id: "gimnasia-shhupalcza-kalmara-po-aziatski-s-risom",
         name: "Щупальца кальмара по-азиатски с рисом",
-        description: "Рис, кальмары, соус перечный, соус устричный, соус хойсин, масло сладко-сливочное, сахар, соевый соус, аджиномото, соль, приправа 5 перцев, Е202, масло подсолнечное, перец болгарский, лук зелёный, масло с перцем и кунжутом, лук-сибулет",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/3A4ECEAF-D705-4AAF-A2A2-5C5244B3F320.webp",
-        partnerWants: false
+        description:
+          "Рис, кальмары, соус перечный, соус устричный, соус хойсин, масло сладко-сливочное, сахар, соевый соус, аджиномото, соль, приправа 5 перцев, Е202, масло подсолнечное, перец болгарский, лук зелёный, масло с перцем и кунжутом, лук-сибулет",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/3A4ECEAF-D705-4AAF-A2A2-5C5244B3F320.webp",
+        partnerWants: false,
       },
       {
         id: "gimnasia-govyadina-s-kartofelem-gunbao-1",
         name: "Говядина с картофелем гунбао",
-        description: "Картофель черри, говядина вырезка, соус гунбао, крахмал кукурузный, масло фритюрное, кунжут белый, масло кунжутное, кинза, лук зелёный",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/0F8EE2AE-32CA-4AC0-BB4F-08CB0250CF95?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355430816&Signature=%2BW14YZnMu7aijeTeAJs8TcGIeGQ%3D",
-        partnerWants: false
+        description:
+          "Картофель черри, говядина вырезка, соус гунбао, крахмал кукурузный, масло фритюрное, кунжут белый, масло кунжутное, кинза, лук зелёный",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/0F8EE2AE-32CA-4AC0-BB4F-08CB0250CF95?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355430816&Signature=%2BW14YZnMu7aijeTeAJs8TcGIeGQ%3D",
+        partnerWants: false,
       },
       {
         id: "gimnasia-poke-boul-s-krevetkami-1",
         name: "Поке боул с тигровыми креветками",
-        description: "Рис для суши, креветки, томаты черри, киноа, бобы эдамаме, огурцы, грибы муэр маринованне, соус унаги, соус шисо, соус цитрусовый, шпинат мини, масло растительное, микрозелень рукола, фурикакэ кунжутный",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/7CB0C04F-4634-4A34-AFED-2E04193353CA.webp",
-        partnerWants: false
+        description:
+          "Рис для суши, креветки, томаты черри, киноа, бобы эдамаме, огурцы, грибы муэр маринованне, соус унаги, соус шисо, соус цитрусовый, шпинат мини, масло растительное, микрозелень рукола, фурикакэ кунжутный",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/7CB0C04F-4634-4A34-AFED-2E04193353CA.webp",
+        partnerWants: false,
       },
       {
         id: "gimnasia-poke-boul-s-lososem-1",
         name: "Поке боул с лососем и авокадо",
-        description: "Рис для суши, лосось, томаты черри, авокадо, киноа, бобы эдамаме, огурцы, соус унаги, соус шисо, соус цитрусовый, шпинат мини, микрозелень рукола, фурикакэ кунжутный",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/4FD09C4B-C09C-48EE-B431-28436B89A33B.webp",
-        partnerWants: false
+        description:
+          "Рис для суши, лосось, томаты черри, авокадо, киноа, бобы эдамаме, огурцы, соус унаги, соус шисо, соус цитрусовый, шпинат мини, микрозелень рукола, фурикакэ кунжутный",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/4FD09C4B-C09C-48EE-B431-28436B89A33B.webp",
+        partnerWants: false,
       },
       {
         id: "gimnasia-lapsha-s-moreproduktami-v-souse-tom-yam",
         name: "Лапша с морепродуктами в соусе Том ям",
-        description: "Лапша пшеничная, соус том ям, креветки, кальмары, скрэмбл, масло подсолнечное, масло с перцем и кунжутом, лук-сибулет",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/C2B59B23-D15D-4061-ABAF-65CEB6AE1AE8.webp",
-        partnerWants: false
+        description:
+          "Лапша пшеничная, соус том ям, креветки, кальмары, скрэмбл, масло подсолнечное, масло с перцем и кунжутом, лук-сибулет",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/C2B59B23-D15D-4061-ABAF-65CEB6AE1AE8.webp",
+        partnerWants: false,
       },
       {
         id: "gimnasia-lapsha-s-krevetkami-i-kalmarom-pad-taj-r",
         name: "Лапша с креветками и кальмаром Пад Тай",
-        description: "Лапша рисовая, соус пад тай, овощной микс, тофу, скрэмбл, креветки, кальмары, лук зелёный, лук репчатый, масло подсолнечное, арахис",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/0A565D07-A5BE-476C-8029-F96E884A24D7.webp",
-        partnerWants: false
+        description:
+          "Лапша рисовая, соус пад тай, овощной микс, тофу, скрэмбл, креветки, кальмары, лук зелёный, лук репчатый, масло подсолнечное, арахис",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/0A565D07-A5BE-476C-8029-F96E884A24D7.webp",
+        partnerWants: false,
       },
       {
         id: "gimnasia-ovoshhnoj-vok-v-kislo-sladkom-souse-v",
         name: "Овощной вок в кисло-сладком соусе",
         description: "Лапша яичная, овощной микс, соус кисло-сладкий, скрэмбл",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/D54D7FBB-0A1E-49FA-91AC-6733551585CA?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2370936327&Signature=TMd1dWCxBQ0KB3aZb4PZUB2YlmE%3D",
-        partnerWants: false
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/D54D7FBB-0A1E-49FA-91AC-6733551585CA?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2370936327&Signature=TMd1dWCxBQ0KB3aZb4PZUB2YlmE%3D",
+        partnerWants: false,
       },
       {
         id: "gimnasia-udon-s-perechnoj-kuricej-v",
         name: "Удон с перечной курицей",
-        description: "Лапша пшеничная удон, куриное бедро маринованное, соус перечный, соус устричный, соус хойсин, масло сладко-сливочное, сахар, соевый соус, аджиномото, соль, приправа 5 перцев, Е202, овощной микс, масло растительное, скрэмбл, крахмал кукурузный, перчик с арахисом, корень имбиря, чеснок, ростки подсолнуха, лук-сибулет, кунжут",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/3F6D5E24-984D-4081-91F8-7A24478D3DC0.webp",
-        partnerWants: false
+        description:
+          "Лапша пшеничная удон, куриное бедро маринованное, соус перечный, соус устричный, соус хойсин, масло сладко-сливочное, сахар, соевый соус, аджиномото, соль, приправа 5 перцев, Е202, овощной микс, масло растительное, скрэмбл, крахмал кукурузный, перчик с арахисом, корень имбиря, чеснок, ростки подсолнуха, лук-сибулет, кунжут",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/3F6D5E24-984D-4081-91F8-7A24478D3DC0.webp",
+        partnerWants: false,
       },
       {
         id: "gimnasia-udon-s-kuricej-teriyaki-v",
         name: "Лапша с курицей терияки",
-        description: "Лапша пшеничная, бедро куриное маринованное, овощной микс, соус терияки, скрэмбл, тофу жареный, ростки подсолнуха, арахис, лук-сибулет",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/AC36E7F0-1556-47C8-BCED-54BB0268852A.webp",
-        partnerWants: false
+        description:
+          "Лапша пшеничная, бедро куриное маринованное, овощной микс, соус терияки, скрэмбл, тофу жареный, ростки подсолнуха, арахис, лук-сибулет",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/AC36E7F0-1556-47C8-BCED-54BB0268852A.webp",
+        partnerWants: false,
       },
       {
         id: "gimnasia-singapurskaya-lapsha-s-kalmarom-i-kuricej-v",
         name: "Сингапурская лапша с кальмаром и курицей",
         description: "Лапша пшеничная, соус сингапурский",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/82F855FA-6369-4397-A881-20DD6125CF0F.webp",
-        partnerWants: false
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/82F855FA-6369-4397-A881-20DD6125CF0F.webp",
+        partnerWants: false,
       },
       {
         id: "gimnasia-udon-s-govyadinoj-po-sychuanski-v",
         name: "Лапша с говядиной по-сычуаньски",
-        description: "Лапша пшеничная, соус сычуаньский, говядина маринованная, овощной микс, скрэмбл, тофу жареный, масло растительное, ростки подсолнуха, арахис, корень имбиря, чеснок, лук-сибулет",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/D400C01E-3A3E-434B-87F2-49D35957B946.webp",
-        partnerWants: false
+        description:
+          "Лапша пшеничная, соус сычуаньский, говядина маринованная, овощной микс, скрэмбл, тофу жареный, масло растительное, ростки подсолнуха, арахис, корень имбиря, чеснок, лук-сибулет",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/D400C01E-3A3E-434B-87F2-49D35957B946.webp",
+        partnerWants: false,
       },
       {
         id: "gimnasia-risovaya-lapsha-s-moreproduktami-i-citrusovym-sousom-1",
         name: "Рисовая лапша с морепродуктами и цитрусовым соусом",
         description: "Лапша рисовая, соус цитрусовая соя",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/65E0E043-1CF3-4D38-AE41-55BC05F0024D?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2368775636&Signature=Vxik5XDoXapbs5R1FxGc8UB3NX8%3D",
-        partnerWants: false
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/65E0E043-1CF3-4D38-AE41-55BC05F0024D?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2368775636&Signature=Vxik5XDoXapbs5R1FxGc8UB3NX8%3D",
+        partnerWants: false,
       },
       {
         id: "gimnasia-batat-vok-s-lososem-tom-yam-v",
         name: "Батат вок с лососем том ям",
-        description: "Лапша бататовая, овощной микс, соус лемонграсс, лосось, скрэмбл, масло растительное, имбирь, чеснок, ростки подсолнуха, кунжут",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/58B8D831-6085-4F02-AACF-68B5215D5AF2?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2370936110&Signature=gJ7ex8oWgQ105A4uTUaVXzosJrw%3D",
-        partnerWants: false
+        description:
+          "Лапша бататовая, овощной микс, соус лемонграсс, лосось, скрэмбл, масло растительное, имбирь, чеснок, ростки подсолнуха, кунжут",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/58B8D831-6085-4F02-AACF-68B5215D5AF2?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2370936110&Signature=gJ7ex8oWgQ105A4uTUaVXzosJrw%3D",
+        partnerWants: false,
       },
       {
         id: "gimnasia-slivochnaya-vok-lapsha-s-lososem-v",
         name: "Сливочная вок-лапша с лососем",
-        description: "Лапша пшеничная, соус сливочный, овощной микс, лосось, скрэмбл, тофу жареный, масло растительное, арахис, корень имбиря, чеснок, лук-сибулет",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/F630C945-4308-42C2-BC38-2183F8FC199F.webp",
-        partnerWants: false
+        description:
+          "Лапша пшеничная, соус сливочный, овощной микс, лосось, скрэмбл, тофу жареный, масло растительное, арахис, корень имбиря, чеснок, лук-сибулет",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/F630C945-4308-42C2-BC38-2183F8FC199F.webp",
+        partnerWants: false,
       },
       {
         id: "gimnasia-ris-s-govyadinoj-po-sychuanski-v",
         name: "Рис с говядиной по-сычуаньски ",
-        description: "Рис, соус сычуаньский, говядина маринованная, овощной микс, скрэмбл, масло растительное, кунжут, лук зёлёный",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/1BC2A82F-9732-4688-A643-D9C79B4CE285?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2370936350&Signature=z36YvEJHQszznWLMRhdwvowklcw%3D",
-        partnerWants: false
+        description:
+          "Рис, соус сычуаньский, говядина маринованная, овощной микс, скрэмбл, масло растительное, кунжут, лук зёлёный",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/1BC2A82F-9732-4688-A643-D9C79B4CE285?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2370936350&Signature=z36YvEJHQszznWLMRhdwvowklcw%3D",
+        partnerWants: false,
       },
       {
         id: "gimnasia-ris-s-kuricej-teriyaki-v",
         name: "Рис с курицей терияки",
-        description: "Рис, куриное бедро маринованное, овощной микс, соус терияки, скрэмбл, масло растительное, лук зелёный, имбирь, чеснок, кунжут",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/A53251D3-EDD6-4202-AFCB-30726D260F3E?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355301442&Signature=3T0AyibeDj%2F84ixjq3ZebOnbevw%3D",
-        partnerWants: false
+        description:
+          "Рис, куриное бедро маринованное, овощной микс, соус терияки, скрэмбл, масло растительное, лук зелёный, имбирь, чеснок, кунжут",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/A53251D3-EDD6-4202-AFCB-30726D260F3E?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355301442&Signature=3T0AyibeDj%2F84ixjq3ZebOnbevw%3D",
+        partnerWants: false,
       },
       {
         id: "gimnasia-ris-s-perechnoj-govyadinoj-v",
         name: "Рис с перечной говядиной",
-        description: "Рис, соус перечный, соус устричный, соус хойсин, масло сладко-сливочное, сахар, соевый соус, аджиномото, соль, приправа 5 перцев, Е202, говядина маринованная, овощной микс, скрэмбл, масло растительное, перчик с арахисом, ростки подсолнуха, имбирь, чеснок, кунжут",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/3F507A14-A088-427D-A286-9543D33FF9CC?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2370936389&Signature=3dTkIr0glZvU4lTZs7aK0w4ksQ0%3D",
-        partnerWants: false
-      }
-    ]
+        description:
+          "Рис, соус перечный, соус устричный, соус хойсин, масло сладко-сливочное, сахар, соевый соус, аджиномото, соль, приправа 5 перцев, Е202, говядина маринованная, овощной микс, скрэмбл, масло растительное, перчик с арахисом, ростки подсолнуха, имбирь, чеснок, кунжут",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/3F507A14-A088-427D-A286-9543D33FF9CC?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2370936389&Signature=3dTkIr0glZvU4lTZs7aK0w4ksQ0%3D",
+        partnerWants: false,
+      },
+    ],
   },
   {
     id: "ricers",
@@ -426,597 +488,738 @@ export const restaurants: Restaurant[] = [
         id: "ricers-sashimi-salat-s-lososem-mango-i-avokado",
         name: "Сашими салат с лососем, манго и авокадо",
         description: "Лосось, манго, авокадо, соус имбирный",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/92EB2B30-0628-48E1-A989-B7B15AE5545A.webp",
-        partnerWants: false
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/92EB2B30-0628-48E1-A989-B7B15AE5545A.webp",
+        partnerWants: false,
       },
       {
         id: "ricers-salat-kajso",
         name: "Салат Кайсо",
         description: "Водоросли чука, соус ореховый, бобы эдамаме, икра масаго",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/CAD24E0E-02E3-43EB-A58E-3F73BF147417?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355484458&Signature=DXrglMy0SF6fzGb71B8ZCcIC0Co%3D",
-        partnerWants: false
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/CAD24E0E-02E3-43EB-A58E-3F73BF147417?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355484458&Signature=DXrglMy0SF6fzGb71B8ZCcIC0Co%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-tataki-grebeshok",
         name: "Татаки гребешок",
-        description: "Рис для суши, морской гребешок, соус дорблю, соус унаги юдзу, фурикакэ кунжутный",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/E7748575-C21A-421E-877D-50848F971DFA?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2389756659&Signature=6MR6nRs9nwnLe4rdqr%2Bb8qyBrZE%3D",
-        partnerWants: false
+        description:
+          "Рис для суши, морской гребешок, соус дорблю, соус унаги юдзу, фурикакэ кунжутный",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/E7748575-C21A-421E-877D-50848F971DFA?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2389756659&Signature=6MR6nRs9nwnLe4rdqr%2Bb8qyBrZE%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-tataki-losos",
         name: "Татаки лосось",
-        description: "Рис для суши, лосось, соус дорблю, соус унаги юдзу, фурикакэ кунжутный",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/32908FE7-D6ED-4BAA-960B-9060037C515E?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2389756700&Signature=LjcC9XruLBQ1o38bTuSgUPddqyU%3D",
-        partnerWants: false
+        description:
+          "Рис для суши, лосось, соус дорблю, соус унаги юдзу, фурикакэ кунжутный",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/32908FE7-D6ED-4BAA-960B-9060037C515E?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2389756700&Signature=LjcC9XruLBQ1o38bTuSgUPddqyU%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-tataki-tunecz",
         name: "Татаки тунец",
-        description: "Рис для суши, тунец, соус дорблю, соус унаги юдзу, фурикакэ кунжутный",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/3C6EF2A8-8246-4644-9A23-80ABA48E10FD?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2389756759&Signature=LgYXoY0QOL1NB8PEeyppQ8Cx4KU%3D",
-        partnerWants: false
+        description:
+          "Рис для суши, тунец, соус дорблю, соус унаги юдзу, фурикакэ кунжутный",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/3C6EF2A8-8246-4644-9A23-80ABA48E10FD?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2389756759&Signature=LgYXoY0QOL1NB8PEeyppQ8Cx4KU%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-sushi-losos-11",
         name: "Суши лосось",
         description: "Рис для суши, лосось",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/AAC07328-D23A-41CB-AEF2-FAC88CEA2C6E?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2389756579&Signature=%2Brotg99798Ejy2tiA9kDLh1XhQo%3D",
-        partnerWants: false
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/AAC07328-D23A-41CB-AEF2-FAC88CEA2C6E?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2389756579&Signature=%2Brotg99798Ejy2tiA9kDLh1XhQo%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-sushi-grebeshok-1",
         name: "Суши гребешок",
         description: "Рис для суши, морской гребешок",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/00965007-8E97-4044-A75C-4E21770B625F?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2389756565&Signature=J4AegefR%2BFTQQmJeH2QAlw8mpDE%3D",
-        partnerWants: false
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/00965007-8E97-4044-A75C-4E21770B625F?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2389756565&Signature=J4AegefR%2BFTQQmJeH2QAlw8mpDE%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-sushi-ugor-1",
         name: "Суши угорь",
         description: "Рис для суши, угорь копчёный, соус унаги, кунжут, нори",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/135B56AF-B746-41AC-A74F-198B798D48D7?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2372829654&Signature=7QwJMp4uXLnNG1QI5dlWB5htSs4%3D",
-        partnerWants: false
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/135B56AF-B746-41AC-A74F-198B798D48D7?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2372829654&Signature=7QwJMp4uXLnNG1QI5dlWB5htSs4%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-sushi-krevetka-1",
         name: "Суши креветка",
         description: "Рис для суши, креветки",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/D7EB5BDE-F431-4772-852D-052CBD2EE262?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2372829716&Signature=xBHJzP%2Fnzw0UiCYTaqNCsiUTK9U%3D",
-        partnerWants: false
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/D7EB5BDE-F431-4772-852D-052CBD2EE262?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2372829716&Signature=xBHJzP%2Fnzw0UiCYTaqNCsiUTK9U%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-sushi-assorti-2",
         name: "Суши ассорти",
-        description: "Рис для суши, лосось, креветки, морской гребешок, угорь копчёный, соус унаги, кунжут, нори",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/0322B726-9C4C-40C8-8546-FEE12D888E41?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2389756459&Signature=v8S%2FpZt31Yiwc%2F%2Bd3bwk%2BfYHGHY%3D",
-        partnerWants: false
+        description:
+          "Рис для суши, лосось, креветки, морской гребешок, угорь копчёный, соус унаги, кунжут, нори",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/0322B726-9C4C-40C8-8546-FEE12D888E41?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2389756459&Signature=v8S%2FpZt31Yiwc%2F%2Bd3bwk%2BfYHGHY%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-gunkany-s-lososem-v-souse-shri-mango-1",
         name: "Гунканы с лососем в соусе шри-манго",
-        description: "Рис для суши, лосось, огурцы, соус шри-манго, микрозелень рукола",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/F00AB72F-72AC-41D7-8CAB-80B9DF811C9D?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2372761409&Signature=iPVgSGzSVDcuZXphtyjubuRvHFU%3D",
-        partnerWants: false
+        description:
+          "Рис для суши, лосось, огурцы, соус шри-манго, микрозелень рукола",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/F00AB72F-72AC-41D7-8CAB-80B9DF811C9D?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2372761409&Signature=iPVgSGzSVDcuZXphtyjubuRvHFU%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-gunkany-s-govyadinoj-tar-tar-i-ikroj-paltusa",
         name: "Гунканы с говядиной тар-тар и икрой палтуса",
-        description: "Рис для суши, вырезка говяжья, соус горчичный, икра палтуса, васаби, нори, соль морская",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/688AE102-1DD2-47E0-ACE4-A1A33B2EFCF1?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2372761369&Signature=I0zIfDeGRXFfK29vfevqA8g4NyY%3D",
-        partnerWants: false
+        description:
+          "Рис для суши, вырезка говяжья, соус горчичный, икра палтуса, васаби, нори, соль морская",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/688AE102-1DD2-47E0-ACE4-A1A33B2EFCF1?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2372761369&Signature=I0zIfDeGRXFfK29vfevqA8g4NyY%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-gunkany-s-krasnoj-ikroj",
         name: "Гунканы с красной икрой",
         description: "Рис для суши, икра лососевая, нори",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/A4D72432-969D-488E-9D5D-3F2BC3141AFB?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2376549921&Signature=Hud1%2FOe7HL5qw9sqLYM5398%2FfHI%3D",
-        partnerWants: false
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/A4D72432-969D-488E-9D5D-3F2BC3141AFB?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2376549921&Signature=Hud1%2FOe7HL5qw9sqLYM5398%2FfHI%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-gunkany-ostrye-tunecz",
         name: "Гунканы острые тунец",
         description: "Рис для суши, тунец, соус спайси, фурикакэ кунжутный",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/8DEBE79E-5F58-4AAD-AE6E-348708965402?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2389756809&Signature=5u1rAGAAKkYbzscHN4XdY2zApBM%3D",
-        partnerWants: false
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/8DEBE79E-5F58-4AAD-AE6E-348708965402?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2389756809&Signature=5u1rAGAAKkYbzscHN4XdY2zApBM%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-gunkany-ostrye-losos-11",
         name: "Гунканы острые лосось",
         description: "Рис для суши, лосось, соус спайси, фурикакэ кунжутный",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/B76FE985-4116-4ACF-B65F-B80AFE5D581F?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2389756542&Signature=vEzVeUJ2TKsDu6r0SH9HXcgNU00%3D",
-        partnerWants: false
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/B76FE985-4116-4ACF-B65F-B80AFE5D581F?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2389756542&Signature=vEzVeUJ2TKsDu6r0SH9HXcgNU00%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-gunkany-ostrye-grebeshok",
         name: "Гунканы острые гребешок",
-        description: "Рис для суши, морской гребешок, соус спайси, фурикакэ кунжутный",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/D222E994-8F44-464E-B04C-1ACD4AB0F8A6?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2389756504&Signature=9upsgEGUA6s5ZQsxLckIYbJGJB8%3D",
-        partnerWants: false
+        description:
+          "Рис для суши, морской гребешок, соус спайси, фурикакэ кунжутный",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/D222E994-8F44-464E-B04C-1ACD4AB0F8A6?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2389756504&Signature=9upsgEGUA6s5ZQsxLckIYbJGJB8%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-gunkany-ostrye-krevetka",
         name: "Гунканы острые креветка",
         description: "Рис для суши, креветки, соус спайси, фурикакэ кунжутный",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/36D547D0-5D8A-4F9F-AC20-347EB1E218BB?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2389756519&Signature=2g72Z73uHDu02OXojt9x7D6oJoQ%3D",
-        partnerWants: false
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/36D547D0-5D8A-4F9F-AC20-347EB1E218BB?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2389756519&Signature=2g72Z73uHDu02OXojt9x7D6oJoQ%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-gunkany-ostrye-ugor",
         name: "Гунканы острые угорь",
-        description: "Рис для суши, угорь копчёный, соус спайси, фурикакэ кунжутный",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/504AA107-873B-48A4-975A-413E1C7E88D0?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2389756826&Signature=RgEJAGo0MRxSD7QiVykFfOCdBXM%3D",
-        partnerWants: false
+        description:
+          "Рис для суши, угорь копчёный, соус спайси, фурикакэ кунжутный",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/504AA107-873B-48A4-975A-413E1C7E88D0?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2389756826&Signature=RgEJAGo0MRxSD7QiVykFfOCdBXM%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-gunkany-ostrye-assorti-2",
         name: "Гунканы острые ассорти",
-        description: "Рис для суши, соус спайси, лосось, креветки, морской гребешок, угорь копченый, фурикакэ кунжутный",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/4DC3AB2D-FA30-4384-A4D1-F3C1D63CD298?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2389756488&Signature=tyexhmcc2zWmLgejrXWwE0VkJ%2B8%3D",
-        partnerWants: false
+        description:
+          "Рис для суши, соус спайси, лосось, креветки, морской гребешок, угорь копченый, фурикакэ кунжутный",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/4DC3AB2D-FA30-4384-A4D1-F3C1D63CD298?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2389756488&Signature=tyexhmcc2zWmLgejrXWwE0VkJ%2B8%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-temari-assorti",
         name: "Темари ассорти",
-        description: "Рис для суши, лосось, морской гребешок, креветки, сыр творожный, соус унаги, соус том ям, мёд, горчица дижонская, соус шрирача, соус васаби лайм, кунжут, икра масаго, перец чили, икра лососевая, микрозелень базилик, микрозелень рукола, нори",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/19092F39-D878-4F47-BFD4-0DEF910307FA?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2368775672&Signature=38nxkp9SNW1DuToh0XqdmZcWo%2BY%3D",
-        partnerWants: false
+        description:
+          "Рис для суши, лосось, морской гребешок, креветки, сыр творожный, соус унаги, соус том ям, мёд, горчица дижонская, соус шрирача, соус васаби лайм, кунжут, икра масаго, перец чили, икра лососевая, микрозелень базилик, микрозелень рукола, нори",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/19092F39-D878-4F47-BFD4-0DEF910307FA?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2368775672&Signature=38nxkp9SNW1DuToh0XqdmZcWo%2BY%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-temari-losos",
         name: "Темари лосось",
-        description: "Рис для суши, лосось, сыр творожный, соус унаги, соус васаби лайм, кунжут, икра масаго, арахис, перец чили",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/1D950E5E-12C6-4132-8003-568706E46DD8?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2368683153&Signature=3tt%2BNEzEOPyU%2BYgm%2FVbHXj1N5QU%3D",
-        partnerWants: false
+        description:
+          "Рис для суши, лосось, сыр творожный, соус унаги, соус васаби лайм, кунжут, икра масаго, арахис, перец чили",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/1D950E5E-12C6-4132-8003-568706E46DD8?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2368683153&Signature=3tt%2BNEzEOPyU%2BYgm%2FVbHXj1N5QU%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-roll-losos-teriyaki-v-tubuse",
         name: "Лосось терияки в тубусе",
         description: "Ролл Лосось терияки",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/AEA3C704-F822-4A7A-BDD7-40DCF9A0A955.webp",
-        partnerWants: false
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/AEA3C704-F822-4A7A-BDD7-40DCF9A0A955.webp",
+        partnerWants: false,
       },
       {
         id: "ricers-kalifa-v-tubuse-r",
         name: "Калифа в тубусе",
         description: "Ролл Калифорния, соус соевый",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/821A7AB7-209A-4513-8AF9-79F3C76BAFF5.webp",
-        partnerWants: false
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/821A7AB7-209A-4513-8AF9-79F3C76BAFF5.webp",
+        partnerWants: false,
       },
       {
         id: "ricers-fila-v-tubuse",
         name: "Фила в тубусе",
         description: "Ролл Филадельфия, соус соевый",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/9D4A0280-7CA1-4173-B0A2-AE8B2091B02F.webp",
-        partnerWants: false
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/9D4A0280-7CA1-4173-B0A2-AE8B2091B02F.webp",
+        partnerWants: false,
       },
       {
         id: "ricers-kalifa-s-lososem-v-tubuse",
         name: "Калифа с лососем в тубусе",
         description: "Ролл Лосось терияки, соус соевый",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/EFFF58B8-ECAA-4A7D-95DA-154E9CFB23CC.webp",
-        partnerWants: false
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/EFFF58B8-ECAA-4A7D-95DA-154E9CFB23CC.webp",
+        partnerWants: false,
       },
       {
         id: "ricers-roll-s-krevetkoj-tempura-i-ugryom-v-slivochnom-souse",
         name: "Ролл с креветкой темпура и угрём в сливочном соусе ",
-        description: "Рис для суши, соус сливочный хондаши, креветка в темпуре, угорь копчёный, соус унаги, фурикакэ кунжутный",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/86E2CC7D-2BB3-465B-9710-719B1DA40F09.webp",
-        partnerWants: false
+        description:
+          "Рис для суши, соус сливочный хондаши, креветка в темпуре, угорь копчёный, соус унаги, фурикакэ кунжутный",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/86E2CC7D-2BB3-465B-9710-719B1DA40F09.webp",
+        partnerWants: false,
       },
       {
         id: "ricers-roll-s-krevetkoj-tempura-i-lososem-v-slivochnom-souse",
         name: "Ролл с креветкой темпура и лососем в сливочном соусе",
-        description: "Рис для суши, соус сливочный хондаши, креветка в темпуре, лосось, соус спайси, фурикакэ кунжутный",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/2D5BDA2E-7351-43EE-AA7D-209C05A65B0F.webp",
-        partnerWants: false
+        description:
+          "Рис для суши, соус сливочный хондаши, креветка в темпуре, лосось, соус спайси, фурикакэ кунжутный",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/2D5BDA2E-7351-43EE-AA7D-209C05A65B0F.webp",
+        partnerWants: false,
       },
       {
         id: "ricers-roll-s-krevetkoj-tempura-v-slivochnom-souse",
         name: "Ролл с креветкой темпура в сливочном соусе",
-        description: "Рис для суши, соус сливочный хондаши, креветка в темпуре, креветки, соус том ям, мёд, горчица дижонская, соус шрирача, икра масаго, лук-сибулет, нори",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/8EE25B21-F231-4985-BB91-302AF1DD2D2E.webp",
-        partnerWants: false
+        description:
+          "Рис для суши, соус сливочный хондаши, креветка в темпуре, креветки, соус том ям, мёд, горчица дижонская, соус шрирача, икра масаго, лук-сибулет, нори",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/8EE25B21-F231-4985-BB91-302AF1DD2D2E.webp",
+        partnerWants: false,
       },
       {
         id: "ricers-roll-s-krevetkoj-tempura",
         name: "Ролл с креветкой темпура",
-        description: "Рис для суши, креветка в темпуре, салат лолла бьондо, соус спайси, фурикакэ кунжутный",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/17F05353-AFD9-48BC-9E6D-854EA5D3543E.webp",
-        partnerWants: false
+        description:
+          "Рис для суши, креветка в темпуре, салат лолла бьондо, соус спайси, фурикакэ кунжутный",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/17F05353-AFD9-48BC-9E6D-854EA5D3543E.webp",
+        partnerWants: false,
       },
       {
         id: "ricers-filadelfiya-tataki-s-grushej-i-krevetkoj-tempura",
         name: "Филадельфия татаки с грушей и креветкой темпура",
-        description: "Рис для суши, лосось, креветка в темпуре, груша, сыр творожный, соус имбирный",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/AAF8F5EF-13CD-47C3-A9CC-E45E2D920286.webp",
-        partnerWants: false
+        description:
+          "Рис для суши, лосось, креветка в темпуре, груша, сыр творожный, соус имбирный",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/AAF8F5EF-13CD-47C3-A9CC-E45E2D920286.webp",
+        partnerWants: false,
       },
       {
         id: "ricers-kaliforniya-s-ugryom",
         name: "Калифорния с угрём",
-        description: "Рис для суши, угорь копчёный, сыр творожный, икра тобико, авокадо, нори",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/A8190C05-E72A-4F22-8295-066701E3F05C.webp",
-        partnerWants: false
+        description:
+          "Рис для суши, угорь копчёный, сыр творожный, икра тобико, авокадо, нори",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/A8190C05-E72A-4F22-8295-066701E3F05C.webp",
+        partnerWants: false,
       },
       {
         id: "ricers-roll-kanada-s-ugryom-i-lososem",
         name: "Ролл Канада с угрём и лососем",
-        description: "Рис для суши, угорь копчёный, лосось, сыр творожный, икра тобико, авокадо, соус имбирный",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/954FCCD6-E015-4779-8804-3CAC858E6A4E.webp",
-        partnerWants: false
+        description:
+          "Рис для суши, угорь копчёный, лосось, сыр творожный, икра тобико, авокадо, соус имбирный",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/954FCCD6-E015-4779-8804-3CAC858E6A4E.webp",
+        partnerWants: false,
       },
       {
         id: "ricers-rice-roll-s-krevetkoj",
         name: "Rice ролл с креветкой",
-        description: "Рис для суши, креветки, сыр творожный, рисовая бумага, икра масаго, рукола",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/23D77BC9-8A17-4188-B988-8B6A5FF13D2B?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2370929836&Signature=nWTCoP9%2BjTLc2J%2F5S57xdbV8UxQ%3D",
-        partnerWants: false
+        description:
+          "Рис для суши, креветки, сыр творожный, рисовая бумага, икра масаго, рукола",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/23D77BC9-8A17-4188-B988-8B6A5FF13D2B?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2370929836&Signature=nWTCoP9%2BjTLc2J%2F5S57xdbV8UxQ%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-roll-losos-teriyaki",
         name: "Ролл Лосось терияки",
         description: "Суши рис",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/0EBF8C56-E9F3-4ACA-A526-37709129774A.webp",
-        partnerWants: false
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/0EBF8C56-E9F3-4ACA-A526-37709129774A.webp",
+        partnerWants: false,
       },
       {
         id: "ricers-rice-roll-s-lososem-i-sladkim-mango-1",
         name: "Rice ролл с лососем и сладким манго",
-        description: "Рис для суши, авокадо, лосось, манго маринованное, салат лолло бьонда, икра масаго",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/CC4D5DA0-E05A-4D3C-8F5E-578F389E6F9C?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355301527&Signature=RZEuuvkV3G6zB0xASfIakmlzlPs%3D",
-        partnerWants: false
+        description:
+          "Рис для суши, авокадо, лосось, манго маринованное, салат лолло бьонда, икра масаго",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/CC4D5DA0-E05A-4D3C-8F5E-578F389E6F9C?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355301527&Signature=RZEuuvkV3G6zB0xASfIakmlzlPs%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-kaliforniya-s-lososem-moskva",
         name: "Калифорния с лососем",
         description: "Суши рис",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/C949EB35-E613-47A2-A518-00AF0EC2F93E.webp",
-        partnerWants: false
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/C949EB35-E613-47A2-A518-00AF0EC2F93E.webp",
+        partnerWants: false,
       },
       {
         id: "ricers-roll-s-kopchyonym-lososem-v-struzhke-tuncza",
         name: "Ролл с копчёным лососем в стружке тунца",
-        description: "Рис для суши, лосось копчёный, сыр творожный, перец болгарский, лук зелёный, стружка тунца, нори",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/91A44911-3146-4AF3-92BC-A7AADF586237?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355301556&Signature=0VnPUf3qgS7%2FmCvjwm9YLLHGMbQ%3D",
-        partnerWants: false
+        description:
+          "Рис для суши, лосось копчёный, сыр творожный, перец болгарский, лук зелёный, стружка тунца, нори",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/91A44911-3146-4AF3-92BC-A7AADF586237?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355301556&Signature=0VnPUf3qgS7%2FmCvjwm9YLLHGMbQ%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-shriracha-roll-s-lososem-i-kinzoj",
         name: "Шрирача ролл с лососем и кинзой",
-        description: "Рис для суши, лосось терияки, соус спайси, огурцы, соус цитрусовый, стружка тунца, соус шрирача, кинза, нори, микрозелень рукола",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/B9687DF9-159D-45E9-969E-795264EA6E2A?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2369904837&Signature=ulioECGKumGcK2y2XgKdF5uP278%3D",
-        partnerWants: false
+        description:
+          "Рис для суши, лосось терияки, соус спайси, огурцы, соус цитрусовый, стружка тунца, соус шрирача, кинза, нори, микрозелень рукола",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/B9687DF9-159D-45E9-969E-795264EA6E2A?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2369904837&Signature=ulioECGKumGcK2y2XgKdF5uP278%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-tom-yam-roll",
         name: "Том ям ролл",
-        description: "Рис для суши, креветки, соус том ям, мёд, горчица дижонская, соус шрирача, огурцы, авокадо, сухари панко, икра масаго, фурикакэ кунжутный",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/501FD154-2E5E-4817-A8C7-72DA64B13C2D.webp",
-        partnerWants: false
+        description:
+          "Рис для суши, креветки, соус том ям, мёд, горчица дижонская, соус шрирача, огурцы, авокадо, сухари панко, икра масаго, фурикакэ кунжутный",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/501FD154-2E5E-4817-A8C7-72DA64B13C2D.webp",
+        partnerWants: false,
       },
       {
         id: "ricers-czunami-roll",
         name: "Цунами ролл",
-        description: "Рис для суши, лосось, огурцы, соус спайси, соус унаги, кунжут, соус васаби лайм, икра масаго, лук фри, нори, микрозелень рукола",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/9984C1EC-D0FF-4E79-AD46-4D868AB0359C.webp",
-        partnerWants: false
+        description:
+          "Рис для суши, лосось, огурцы, соус спайси, соус унаги, кунжут, соус васаби лайм, икра масаго, лук фри, нори, микрозелень рукола",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/9984C1EC-D0FF-4E79-AD46-4D868AB0359C.webp",
+        partnerWants: false,
       },
       {
         id: "ricers-roll-s-ugryom-krabom-i-tempurnymi-chipsami-2",
         name: "Ролл с угрём, крабом и темпурными чипсами",
-        description: "Рис для суши, угорь копчёный, сыр творожный, микс краба, икра масаго, чипсы темпурные, кунжут, нори",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/22FD7BBE-3DE2-4DD9-B879-B2CE482C54FA?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355301949&Signature=AKWLMF%2Fjz8Uh%2F7xe61bUlPlTsBI%3D",
-        partnerWants: false
+        description:
+          "Рис для суши, угорь копчёный, сыр творожный, микс краба, икра масаго, чипсы темпурные, кунжут, нори",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/22FD7BBE-3DE2-4DD9-B879-B2CE482C54FA?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355301949&Signature=AKWLMF%2Fjz8Uh%2F7xe61bUlPlTsBI%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-roll-s-tartarom-iz-kopchyonogo-lososya",
         name: "Ролл с тартаром из копчёного лосося",
-        description: "Рис для суши, сыр творожный, лосось копчёный, соус цитрусовый, огурцы, авокадо, лук фри, нори",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/1BE7F33C-4116-4CD4-B36D-EA896F81FADB.webp",
-        partnerWants: false
+        description:
+          "Рис для суши, сыр творожный, лосось копчёный, соус цитрусовый, огурцы, авокадо, лук фри, нори",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/1BE7F33C-4116-4CD4-B36D-EA896F81FADB.webp",
+        partnerWants: false,
       },
       {
         id: "ricers-roll-slivochnyj-s-lososem-1",
         name: "Ролл сливочный с лососем",
-        description: "Рис для суши, лосось, сыр творожный, огурцы, авокадо, соус унаги, кунжут, лук зелёный, нори",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/471983D7-D52B-4431-B64C-7EDC1024FEC7?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355402837&Signature=M4cN4y9Mz5pSTRwGO0vCE%2BO%2F0Sc%3D",
-        partnerWants: false
+        description:
+          "Рис для суши, лосось, сыр творожный, огурцы, авокадо, соус унаги, кунжут, лук зелёный, нори",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/471983D7-D52B-4431-B64C-7EDC1024FEC7?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355402837&Signature=M4cN4y9Mz5pSTRwGO0vCE%2BO%2F0Sc%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-roll-s-lososem-i-sladkim-mango-1",
         name: "Ролл с лососем и сладким манго",
-        description: "Рис для суши, сыр творожный, креветки, лосось, манго маринованное, нори, мята",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/290FD51F-445A-4CAE-AE6A-39B280EF077E.webp",
-        partnerWants: false
+        description:
+          "Рис для суши, сыр творожный, креветки, лосось, манго маринованное, нори, мята",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/290FD51F-445A-4CAE-AE6A-39B280EF077E.webp",
+        partnerWants: false,
       },
       {
         id: "ricers-kaliforniya-2",
         name: "Калифорния",
-        description: "Рис для суши, микс краба, икра тобико, майонез, авокадо, нори",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/752F0B16-E491-4BC1-B081-7199DEB5BABF.webp",
-        partnerWants: false
+        description:
+          "Рис для суши, микс краба, икра тобико, майонез, авокадо, нори",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/752F0B16-E491-4BC1-B081-7199DEB5BABF.webp",
+        partnerWants: false,
       },
       {
         id: "ricers-filadelfiya",
         name: "Филадельфия",
-        description: "Рис для суши, лосось, сыр творожный, огурцы, авокадо, нори",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/CB505575-F04F-492D-96D2-8E2D0407874C?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355402937&Signature=ufUU%2BEdC9k7hDFRJSSnq2kjPdNE%3D",
-        partnerWants: false
+        description:
+          "Рис для суши, лосось, сыр творожный, огурцы, авокадо, нори",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/CB505575-F04F-492D-96D2-8E2D0407874C?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355402937&Signature=ufUU%2BEdC9k7hDFRJSSnq2kjPdNE%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-filadelfiya-karamelnaya",
         name: "Филадельфия карамельная",
-        description: "Рис для суши, лосось, сыр творожный, огурцы, сахар тростниковый, авокадо, нори",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/BBE0BF42-4BC4-4B15-BD9E-43B14DF2ACE7?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355420355&Signature=GnzY9JHNPl%2B3L8M9k8I2l%2Fyf4jY%3D",
-        partnerWants: false
+        description:
+          "Рис для суши, лосось, сыр творожный, огурцы, сахар тростниковый, авокадо, нори",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/BBE0BF42-4BC4-4B15-BD9E-43B14DF2ACE7?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355420355&Signature=GnzY9JHNPl%2B3L8M9k8I2l%2Fyf4jY%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-filadelfiya-s-kopchyonym-lososem-i-ugryom",
         name: "Филадельфия с копчёным лососем и угрём",
-        description: "Рис для суши, сыр творожный, лосось копчёный, угорь копчёный, огурцы, лук зелёный, соус унаги, нори, кунжут",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/E2A1E322-F5E8-4945-85A9-5DDC7AFB9846.webp",
-        partnerWants: false
+        description:
+          "Рис для суши, сыр творожный, лосось копчёный, угорь копчёный, огурцы, лук зелёный, соус унаги, нори, кунжут",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/E2A1E322-F5E8-4945-85A9-5DDC7AFB9846.webp",
+        partnerWants: false,
       },
       {
         id: "ricers-filadelfiya-s-krevetkoj-i-lososem-tom-yam",
         name: "Филадельфия с креветкой и лососем том ям",
-        description: "Рис для суши, креветки, лосось в кляре, сыр творожный, огурцы, соус том ям, мёд, горчица дижонская, соус шрирача, нори, микрозелень рукола",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/307D0DA5-5FD0-4A06-A3F5-DA52EEF1C99C?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2364646566&Signature=2aD0HP%2BgRh28OxVvmcqeiyO259Q%3D",
-        partnerWants: false
+        description:
+          "Рис для суши, креветки, лосось в кляре, сыр творожный, огурцы, соус том ям, мёд, горчица дижонская, соус шрирача, нори, микрозелень рукола",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/307D0DA5-5FD0-4A06-A3F5-DA52EEF1C99C?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2364646566&Signature=2aD0HP%2BgRh28OxVvmcqeiyO259Q%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-filadelfiya-so-svezhej-klubnikoj",
         name: "Филадельфия со свежей клубникой",
-        description: "Рис для суши, лосось, сыр творожный, клубника, соус унаги, клубника сублимированная",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/3BD28F47-F383-4582-9163-4907D93F6D32?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355429524&Signature=dZjdrIfrZQ5yXhta8jy7g6NhwfE%3D",
-        partnerWants: false
+        description:
+          "Рис для суши, лосось, сыр творожный, клубника, соус унаги, клубника сублимированная",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/3BD28F47-F383-4582-9163-4907D93F6D32?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355429524&Signature=dZjdrIfrZQ5yXhta8jy7g6NhwfE%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-drakon",
         name: "Дракон",
-        description: "Рис для суши, сыр творожный, угорь копченый, огурцы, авокадо, соус унаги, нори",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/937D1B44-F2A5-4348-89C8-0F3DE5A7871E?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2368775551&Signature=LRz8FkuBIWtSD5xnPW0aRFAgb5Y%3D",
-        partnerWants: false
+        description:
+          "Рис для суши, сыр творожный, угорь копченый, огурцы, авокадо, соус унаги, нори",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/937D1B44-F2A5-4348-89C8-0F3DE5A7871E?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2368775551&Signature=LRz8FkuBIWtSD5xnPW0aRFAgb5Y%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-roll-s-grebeshkom-i-krevetkoj",
         name: "Ролл с гребешком и креветкой",
-        description: "Рис для суши, креветки, морской гребешок, сыр творожный, соус спайси, икра масаго, нори, микрозелень базилик",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/D465AD3F-20BB-4B51-AEF2-9A9EC0728125?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355429620&Signature=REReHxPOsCFMIDle9VaGHTAVfdY%3D",
-        partnerWants: false
+        description:
+          "Рис для суши, креветки, морской гребешок, сыр творожный, соус спайси, икра масаго, нори, микрозелень базилик",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/D465AD3F-20BB-4B51-AEF2-9A9EC0728125?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355429620&Signature=REReHxPOsCFMIDle9VaGHTAVfdY%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-roll-s-krabom-i-tartarom-iz-lososya-1",
         name: "Ролл с крабом и тартаром из лосося",
-        description: "Рис для суши, лосось спайси, микс краба, омлет, майонез, соус шрирача, нори",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/07218863-B670-4DEF-8AFA-70FD3B0E462D?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2376479816&Signature=0XkK6rjDpWBbQvbCdXmtHjelcPU%3D",
-        partnerWants: false
+        description:
+          "Рис для суши, лосось спайси, микс краба, омлет, майонез, соус шрирача, нори",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/07218863-B670-4DEF-8AFA-70FD3B0E462D?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2376479816&Signature=0XkK6rjDpWBbQvbCdXmtHjelcPU%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-zapechyonnyj-roll-s-ugryom-lososem-i-krevetkoj",
         name: "Запечённый ролл с угрём, лососем и креветкой",
-        description: "Рис для суши, креветки, снежный краб, соус тофу-мисо, огурцы, угорь копченый, соус спайси, икра масаго, соус унаги, соус сырно-копченый, соус пад тай, луковый пай, нори",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/0BB7B07B-7BCA-4FC5-8F8B-B484E55924DF.webp",
-        partnerWants: false
+        description:
+          "Рис для суши, креветки, снежный краб, соус тофу-мисо, огурцы, угорь копченый, соус спайси, икра масаго, соус унаги, соус сырно-копченый, соус пад тай, луковый пай, нори",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/0BB7B07B-7BCA-4FC5-8F8B-B484E55924DF.webp",
+        partnerWants: false,
       },
       {
         id: "ricers-zapechennyj-roll-s-ugrem-i-lososem",
         name: "Запечённый ролл с угрём и лососем",
         description: "Состав не указан на сайте.",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/47AD453D-CD59-4531-9AC5-75A122D2532D.webp",
-        partnerWants: false
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/47AD453D-CD59-4531-9AC5-75A122D2532D.webp",
+        partnerWants: false,
       },
       {
         id: "ricers-zapechennyj-roll-s-ugryom-lososem-i-sushyonymi-tomatami",
         name: "Запечённый ролл с угрём, лососем и сушёными томатами",
-        description: "Рис для суши, соус тофу-мисо, угорь копченый, сыр творожный, лосось запеченный, огурцы, салат лолло бьонда, соус унаги, соус сырно-копченый, морковный пай, луковый пай, чипсы рисовые, нори, специи",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/F82029FE-DA33-42E9-AB85-FC36B3C94629.webp",
-        partnerWants: false
+        description:
+          "Рис для суши, соус тофу-мисо, угорь копченый, сыр творожный, лосось запеченный, огурцы, салат лолло бьонда, соус унаги, соус сырно-копченый, морковный пай, луковый пай, чипсы рисовые, нори, специи",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/F82029FE-DA33-42E9-AB85-FC36B3C94629.webp",
+        partnerWants: false,
       },
       {
         id: "ricers-zapechyonnyj-roll-s-lososem-i-pesto",
         name: "Запечённый ролл с лососем и песто",
         description: "Состав не указан на сайте.",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/946749E9-2180-4EAB-88ED-1D22D36485CE.webp",
-        partnerWants: false
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/946749E9-2180-4EAB-88ED-1D22D36485CE.webp",
+        partnerWants: false,
       },
       {
         id: "ricers-zapechennyj-roll-s-lososem-i-krevetkoj",
         name: "Запечённый ролл с лососем и креветкой",
-        description: "Рис для суши, соус тофу-мисо, лосось запеченный, креветки, огурцы, соус унаги, соус сырно-копченый, лук зелёный, кляр жареный, морковный пай, луковый пай, фурикакэ кунжутный",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/D02518DB-FED5-49E4-88E7-0C1D40AAEB5F.webp",
-        partnerWants: false
+        description:
+          "Рис для суши, соус тофу-мисо, лосось запеченный, креветки, огурцы, соус унаги, соус сырно-копченый, лук зелёный, кляр жареный, морковный пай, луковый пай, фурикакэ кунжутный",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/D02518DB-FED5-49E4-88E7-0C1D40AAEB5F.webp",
+        partnerWants: false,
       },
       {
         id: "ricers-drakon-tempura",
         name: "Дракон темпура",
-        description: "Рис для суши, кляр темпурный, угорь копченый, сыр творожный, огурцы, масло подсолнечное, соус унаги, кунжут",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/7DA4CB2C-B6D7-44C5-8E31-C7C78F3A2AE0?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2376479624&Signature=ODThRs30jXaJMwSma88rMFLMKRk%3D",
-        partnerWants: false
+        description:
+          "Рис для суши, кляр темпурный, угорь копченый, сыр творожный, огурцы, масло подсолнечное, соус унаги, кунжут",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/7DA4CB2C-B6D7-44C5-8E31-C7C78F3A2AE0?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2376479624&Signature=ODThRs30jXaJMwSma88rMFLMKRk%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-kranch-roll-filadelfiya",
         name: "Кранч ролл Филадельфия",
-        description: "Рис для суши, кляр темпурный, лосось, сыр творожный, огурцы, икра масаго, сухари панко, нори",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/EF0A589A-A352-4A32-A29F-366C07FA20F1?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2359115543&Signature=VUIQ2Ss9fT85Jfn4PkPm3hhB9a4%3D",
-        partnerWants: false
+        description:
+          "Рис для суши, кляр темпурный, лосось, сыр творожный, огурцы, икра масаго, сухари панко, нори",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/EF0A589A-A352-4A32-A29F-366C07FA20F1?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2359115543&Signature=VUIQ2Ss9fT85Jfn4PkPm3hhB9a4%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-zapechyonnyj-roll-s-ugryom-i-tamago",
         name: "Запечённый ролл с угрём и тамаго",
-        description: "Рис для суши, угорь с сыром, сыр творожный, омлет, огурцы, кунжут, соус унаги, нори",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/FF4FA037-12E3-440F-A560-B2E06FB08117?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2369904461&Signature=%2FlOYKiTmutQuOeczog1%2B%2B6UFrzY%3D",
-        partnerWants: false
+        description:
+          "Рис для суши, угорь с сыром, сыр творожный, омлет, огурцы, кунжут, соус унаги, нори",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/FF4FA037-12E3-440F-A560-B2E06FB08117?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2369904461&Signature=%2FlOYKiTmutQuOeczog1%2B%2B6UFrzY%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-zapechyonnyj-roll-s-krevetkoj-i-moczarelloj",
         name: "Запечённый ролл с креветкой и моцареллой",
-        description: "Рис для суши, креветка спайси, икра масаго, сыр творожный, омлет, огурцы кимчи, сыр моцарелла, нори",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/F0CA7B58-F216-421E-9C6A-126717D76F07?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355429710&Signature=%2B73Vr7es2ZnVpwvvAvsbyOfYCBw%3D",
-        partnerWants: false
+        description:
+          "Рис для суши, креветка спайси, икра масаго, сыр творожный, омлет, огурцы кимчи, сыр моцарелла, нори",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/F0CA7B58-F216-421E-9C6A-126717D76F07?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355429710&Signature=%2B73Vr7es2ZnVpwvvAvsbyOfYCBw%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-zapechyonnyj-roll-s-krabom-i-moczarelloj-2",
         name: "Запечённый ролл с крабом и моцареллой",
-        description: "Рис для суши, краб с сыром, сыр творожный, икра масаго, огурцы, нори",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/A94E9360-D200-4D52-A3FD-06BF80449279?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355429737&Signature=nub%2Bh3ZeX7p7N5lHHg%2F3blgLcoU%3D",
-        partnerWants: false
+        description:
+          "Рис для суши, краб с сыром, сыр творожный, икра масаго, огурцы, нори",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/A94E9360-D200-4D52-A3FD-06BF80449279?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355429737&Signature=nub%2Bh3ZeX7p7N5lHHg%2F3blgLcoU%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-big-maki-s-tunczom1",
         name: "Биг маки с тунцом",
         description: "Рис для суши, тунец, нори",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/AA6428D4-EBDF-4DD4-9C9A-A7101FE56AA9?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2388559124&Signature=0ADOFoXaTeI%2F0Y18rvNKNRr9xX0%3D",
-        partnerWants: false
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/AA6428D4-EBDF-4DD4-9C9A-A7101FE56AA9?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2388559124&Signature=0ADOFoXaTeI%2F0Y18rvNKNRr9xX0%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-big-maki-s-avokado-i-ogurczom",
         name: "Биг маки с авокадо и огурцом",
         description: "Рис для суши, огурцы, авокадо, кунжут, нори",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/4D80BAD0-4590-42F8-9FF8-46298F494A88?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2369904371&Signature=BXpvrs%2BjRiFOJBiK81VP0UAvO50%3D",
-        partnerWants: false
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/4D80BAD0-4590-42F8-9FF8-46298F494A88?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2369904371&Signature=BXpvrs%2BjRiFOJBiK81VP0UAvO50%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-big-maki-s-krevetkoj",
         name: "Биг маки с креветкой",
         description: "Рис для суши, креветки, нори",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/72FF6543-6A42-4D0D-80E9-D08055A251BC?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355429796&Signature=7iqqBsyhwIs079pb0o3SdC7QiVw%3D",
-        partnerWants: false
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/72FF6543-6A42-4D0D-80E9-D08055A251BC?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355429796&Signature=7iqqBsyhwIs079pb0o3SdC7QiVw%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-big-maki-s-ugryom",
         name: "Биг маки с угрём",
         description: "Рис для суши, угорь копчёный, нори",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/4CD4D141-64F9-4B38-A61F-7D4C507739F2?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355429810&Signature=E7A5WaRRJWKTGFDkqCroAAG5dMI%3D",
-        partnerWants: false
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/4CD4D141-64F9-4B38-A61F-7D4C507739F2?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355429810&Signature=E7A5WaRRJWKTGFDkqCroAAG5dMI%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-big-maki-s-lososem",
         name: "Биг маки с лососем",
         description: "Рис для суши, лосось, нори",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/3F14E897-AC40-4642-9A83-B4776D1B8FC2?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355429822&Signature=9BLSBg4nlZEqwdXCIHnKEnp69%2B8%3D",
-        partnerWants: false
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/3F14E897-AC40-4642-9A83-B4776D1B8FC2?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355429822&Signature=9BLSBg4nlZEqwdXCIHnKEnp69%2B8%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-sushi-maki-c-lososem",
         name: "Суши маки c лососем",
         description: "Рис для суши, лосось",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/112C8D3C-C900-4214-8FC6-8C00E98179EB?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355429832&Signature=aMo6e4Zq29%2FCQJFClKcUY4c1scQ%3D",
-        partnerWants: false
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/112C8D3C-C900-4214-8FC6-8C00E98179EB?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355429832&Signature=aMo6e4Zq29%2FCQJFClKcUY4c1scQ%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-sushi-maki-s-lososem-i-krasnoj-ikroj",
         name: "Суши маки с лососем и красной икрой",
         description: "Рис для суши, лосось, икра лососевая",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/C8207F61-4DD9-4372-A475-79A5188814E1?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355429842&Signature=eeXmwn93wocuXAkbjHBJCqOxjsA%3D",
-        partnerWants: false
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/C8207F61-4DD9-4372-A475-79A5188814E1?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355429842&Signature=eeXmwn93wocuXAkbjHBJCqOxjsA%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-umami-set",
         name: "Умами-сет",
-        description: "Ролл с лососем и сладким манго, Том ям ролл, огурцы, авокадо, сухари панко, икра масаго, фурикакэ кунжутный, Цунами ролл, салат лолло бьондо",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/5E2115F7-BA3D-48C0-A49B-51413340BD53.webp",
-        partnerWants: false
+        description:
+          "Ролл с лососем и сладким манго, Том ям ролл, огурцы, авокадо, сухари панко, икра масаго, фурикакэ кунжутный, Цунами ролл, салат лолло бьондо",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/5E2115F7-BA3D-48C0-A49B-51413340BD53.webp",
+        partnerWants: false,
       },
       {
         id: "ricers-estetik-set",
         name: "Эстетик-сет",
         description: "Ролл с креветкой темпура",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/CB80F2DE-31C8-4620-A586-73952496BDA1.webp",
-        partnerWants: false
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/CB80F2DE-31C8-4620-A586-73952496BDA1.webp",
+        partnerWants: false,
       },
       {
         id: "ricers-hot-crunch-mix",
         name: "Hot Crunch Mix",
-        description: "Кранч ролл филадельфия, дракон темпура, запечённый ролл с гребешком и свежим манго",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/21C53181-ED08-47A3-B900-95B182AEED78?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2381906622&Signature=bQ3tmqyhYzoFLdAmjG2O%2Be0jYT8%3D",
-        partnerWants: false
+        description:
+          "Кранч ролл филадельфия, дракон темпура, запечённый ролл с гребешком и свежим манго",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/21C53181-ED08-47A3-B900-95B182AEED78?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2381906622&Signature=bQ3tmqyhYzoFLdAmjG2O%2Be0jYT8%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-dream-team",
         name: "Dream team",
-        description: "Филадельфия, ролл с тартаром из копчёного лосося, цунами ролл, рукола",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/CC8F41F4-FD2B-400F-B13A-04D3C3D77050?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2381906513&Signature=4YzowHPj8CiY2ybyJ70wDHDZXsA%3D",
-        partnerWants: false
+        description:
+          "Филадельфия, ролл с тартаром из копчёного лосося, цунами ролл, рукола",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/CC8F41F4-FD2B-400F-B13A-04D3C3D77050?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2381906513&Signature=4YzowHPj8CiY2ybyJ70wDHDZXsA%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-orange-box-20",
         name: "Orange box",
-        description: "Филадельфия, ролл сливочный с лососем, биг маки с лососем, суши лосось, гункан острый лосось",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/16E39CA5-EC74-40E7-8804-872AE6DA6338.webp",
-        partnerWants: false
+        description:
+          "Филадельфия, ролл сливочный с лососем, биг маки с лососем, суши лосось, гункан острый лосось",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/16E39CA5-EC74-40E7-8804-872AE6DA6338.webp",
+        partnerWants: false,
       },
       {
         id: "ricers-feel-good",
         name: "Feel Good",
-        description: "Филадельфия, филадельфия с копчёным лососем и угрём, филадельфия с креветкой и лососем том ям, нори, микрозелень рукола, ростки подсолнуха",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/9385BD3C-D61A-4107-AB6D-843240DE9375?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2381906484&Signature=Lb58Nis%2BKNQrGByPNm4ar3FmGSw%3D",
-        partnerWants: false
+        description:
+          "Филадельфия, филадельфия с копчёным лососем и угрём, филадельфия с креветкой и лососем том ям, нори, микрозелень рукола, ростки подсолнуха",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/9385BD3C-D61A-4107-AB6D-843240DE9375?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2381906484&Signature=Lb58Nis%2BKNQrGByPNm4ar3FmGSw%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-hot-box-v",
         name: "Hot box",
-        description: "Кранч ролл филадельфия, запечённый ролл с угрём и тамаго, запечённый ролл с крабом и моцареллой, запечённый ролл с креветкой и моцареллой, микрозелень лук-шнит",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/A55328B2-333B-4059-8EB0-DC9989080F3F?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2381906601&Signature=d1inoiGPt4RhS8N73Cm9JSmOsx0%3D",
-        partnerWants: false
+        description:
+          "Кранч ролл филадельфия, запечённый ролл с угрём и тамаго, запечённый ролл с крабом и моцареллой, запечённый ролл с креветкой и моцареллой, микрозелень лук-шнит",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/A55328B2-333B-4059-8EB0-DC9989080F3F?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2381906601&Signature=d1inoiGPt4RhS8N73Cm9JSmOsx0%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-friday-set-2",
         name: "Friday set",
         description: "Филадельфия, калифорния, дракон ролл, салат лолло бьонда",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/AB638DC2-96DB-4B16-9A79-BF2048829D6B.webp",
-        partnerWants: false
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/AB638DC2-96DB-4B16-9A79-BF2048829D6B.webp",
+        partnerWants: false,
       },
       {
         id: "ricers-fuji-set",
         name: "Fuji Set",
-        description: "Филадельфия с креветкой и лососем том ям, нори, микрозелень рукола, фреш ролл с запечённым лососем",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/AF7E0A0A-6AD0-4854-B923-286E3473416A?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355482426&Signature=UIduLMlZgx8ukDIKoNRYBuZSRlI%3D",
-        partnerWants: false
+        description:
+          "Филадельфия с креветкой и лососем том ям, нори, микрозелень рукола, фреш ролл с запечённым лососем",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/AF7E0A0A-6AD0-4854-B923-286E3473416A?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355482426&Signature=UIduLMlZgx8ukDIKoNRYBuZSRlI%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-party-set",
         name: "Party Set",
         description: "Филадельфия, калифорния с лососем",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/8046A501-55D6-4E68-9F35-34F0446587BF.webp",
-        partnerWants: false
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/8046A501-55D6-4E68-9F35-34F0446587BF.webp",
+        partnerWants: false,
       },
       {
         id: "ricers-set-ricers-1-1",
         name: "Сет Ricers 1.1",
-        description: "Филадельфия, дракон ролл, ролл с крабом и тартаром из лосося, ролл rice с креветкой, суши маки с лососем, гункан с красной икрой",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/2B12BDD3-2706-4590-B7A6-12867305FD05?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355482846&Signature=QGiyfjjrws1kJ%2FC9eQSxxdWDkFA%3D",
-        partnerWants: false
+        description:
+          "Филадельфия, дракон ролл, ролл с крабом и тартаром из лосося, ролл rice с креветкой, суши маки с лососем, гункан с красной икрой",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/2B12BDD3-2706-4590-B7A6-12867305FD05?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2355482846&Signature=QGiyfjjrws1kJ%2FC9eQSxxdWDkFA%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-ricers-4-0-1",
         name: "Ricers 4.0",
-        description: "Филадельфия, ролл rice с креветкой, ролл rice с лососем и сладким манго, ролл с лососем и сладким манго, темари ассорти, соус васаби лайм, кунжут, икра масаго, перец чили, икра лососевая, микрозелень базилик, микрозелень рукола, нори, суши ассорти",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/A003EE81-D474-416F-BCE5-0704E0BF2FD1.webp",
-        partnerWants: false
+        description:
+          "Филадельфия, ролл rice с креветкой, ролл rice с лососем и сладким манго, ролл с лососем и сладким манго, темари ассорти, соус васаби лайм, кунжут, икра масаго, перец чили, икра лососевая, микрозелень базилик, микрозелень рукола, нори, суши ассорти",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/A003EE81-D474-416F-BCE5-0704E0BF2FD1.webp",
+        partnerWants: false,
       },
       {
         id: "ricers-krem-sup-iz-lososya",
         name: "Крем-суп из лосося",
         description: "Крем-суп, чиабатта с пряным маслом",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/C4CCEFFB-78E2-4418-A80A-01BDC80156E1?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2361953968&Signature=Obtw4aFTQHCr6hOoANiePsgkWv4%3D",
-        partnerWants: false
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/C4CCEFFB-78E2-4418-A80A-01BDC80156E1?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2361953968&Signature=Obtw4aFTQHCr6hOoANiePsgkWv4%3D",
+        partnerWants: false,
       },
       {
         id: "ricers-tori-ramen-s-kuricej",
         name: "Тори рамен с курицей",
-        description: "Бульон куриный, лапша пшеничная, яйцо куриное маринованное, куриное филе су-вид, кукуруза мисо, грибы шиитаке, соус терияки, лук зелёный, кунжут, масло кунжутное с чили",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/1DD09BA1-3305-4D77-8B19-617D7652B5E6.webp",
-        partnerWants: false
+        description:
+          "Бульон куриный, лапша пшеничная, яйцо куриное маринованное, куриное филе су-вид, кукуруза мисо, грибы шиитаке, соус терияки, лук зелёный, кунжут, масло кунжутное с чили",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/1DD09BA1-3305-4D77-8B19-617D7652B5E6.webp",
+        partnerWants: false,
       },
       {
         id: "ricers-ramen-tantanmen-s-govyazhim-farshem",
         name: "Рамен ТанТанМён с говяжьим фаршем",
-        description: "Бульон куриный, лапша пшеничная, фарш, яйцо куриное маринованное, ростки подсолнуха, лук фри, арахис, лук зелёный, масло чили",
-        image: "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/200D841A-5582-40C8-B976-84BEC9D604FB?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2361954082&Signature=9XcDWPh31KUHvaAZi7o0NTeZhis%3D",
-        partnerWants: false
-      }
-    ]
-  }
+        description:
+          "Бульон куриный, лапша пшеничная, фарш, яйцо куриное маринованное, ростки подсолнуха, лук фри, арахис, лук зелёный, масло чили",
+        image:
+          "https://ricers-menu.storage.yandexcloud.net/productAnnouncement/200D841A-5582-40C8-B976-84BEC9D604FB?AWSAccessKeyId=cl8E666FCdrZwN18xRbq&Expires=2361954082&Signature=9XcDWPh31KUHvaAZi7o0NTeZhis%3D",
+        partnerWants: false,
+      },
+    ],
+  },
 ];
