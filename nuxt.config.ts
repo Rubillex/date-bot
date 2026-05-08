@@ -3,6 +3,10 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   modules: ["@nuxt/fonts", "@nuxt/icon", "@nuxt/image", "rubillex_frog-modal"],
+  runtimeConfig: {
+    telegramBotToken: process.env.TELEGRAM_BOT_TOKEN,
+    telegramRecipientChatId: process.env.TELEGRAM_RECIPIENT_CHAT_ID,
+  },
 
   vite: {
     css: {

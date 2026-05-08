@@ -20,11 +20,11 @@
       <dl class="date-facts">
         <div>
           <dt>Дата</dt>
-          <dd>Суббота</dd>
+          <dd>На выходных или на недельке</dd>
         </div>
         <div>
           <dt>Время</dt>
-          <dd>19:00</dd>
+          <dd>18:00-20:00</dd>
         </div>
       </dl>
     </article>

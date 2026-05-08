@@ -36,12 +36,17 @@
 
       <DateMenuScreen
         v-else-if="activeStep === 'menu'"
+        :is-sending="isSendingMenu"
+        :is-sent="isMenuSent"
         :restaurants="restaurants"
+        :send-error="sendMenuError"
+        :selected-count="selectedMenuItems.length"
         :selected-restaurant="selectedRestaurant"
         :selected-restaurant-id="selectedRestaurantId"
         :wants="wants"
-        @matches="goToStep('matches')"
         @select-restaurant="selectRestaurant"
+        @show-details="openMenuItemModal"
+        @submit="sendMenuSelection"
         @toggle-want="toggleWant"
       />
 
@@ -62,26 +67,40 @@ import DateMatchesScreen from "~/components/date/screens/DateMatchesScreen.vue";
 import DateMenuScreen from "~/components/date/screens/DateMenuScreen.vue";
 import DatePlaceScreen from "~/components/date/screens/DatePlaceScreen.vue";
 import DateConfirmModal from "~/components/modals/DateConfirmModal.vue";
+import DateMenuItemModal from "~/components/modals/DateMenuItemModal.vue";
 import {
   placePhotos,
   recommendationChips,
   restaurants,
   steps,
   type MenuItem,
+  type Restaurant,
   type StepId,
 } from "~/data/date-invitation";
 
+type SelectedMenuItemPayload = {
+  id: string;
+  name: string;
+  restaurantName: string;
+  description: string;
+  partnerWants: boolean;
+};
+
 const activeStep = ref<StepId>("home");
 const activePhotoIndex = ref(0);
-const selectedRestaurantId = ref("italian");
-const wants = ref<Record<string, boolean>>({
-  bruschetta: false,
-  pasta: false,
-  tiramisu: false,
-  roll: false,
-  mochi: false,
-  lemonade: false,
-});
+const selectedRestaurantId = ref(restaurants[0]?.id ?? "");
+const isSendingMenu = ref(false);
+const isMenuSent = ref(false);
+const sendMenuError = ref<string | null>(null);
+const wants = ref<Record<string, boolean>>(
+  restaurants.reduce<Record<string, boolean>>((accumulator, restaurant) => {
+    restaurant.items.forEach((item) => {
+      accumulator[item.id] = false;
+    });
+
+    return accumulator;
+  }, {}),
+);
 
 const { setModal, clearModals } = useFrogModal();
 
@@ -106,6 +125,33 @@ const allMenuItems = computed(() =>
 const mutualMatches = computed(() =>
   allMenuItems.value.filter((item) => isMutualMatch(item)),
 );
+
+const selectedMenuItems = computed(() =>
+  restaurants.flatMap((restaurant) =>
+    restaurant.items
+      .filter((item) => wants.value[item.id])
+      .map((item) => toSelectedMenuItemPayload(item, restaurant)),
+  ),
+);
+
+const mutualMatchPayload = computed(() =>
+  restaurants.flatMap((restaurant) =>
+    restaurant.items
+      .filter((item) => isMutualMatch(item))
+      .map((item) => toSelectedMenuItemPayload(item, restaurant)),
+  ),
+);
+
+const toSelectedMenuItemPayload = (
+  item: MenuItem,
+  restaurant: Restaurant,
+): SelectedMenuItemPayload => ({
+  id: item.id,
+  name: item.name,
+  restaurantName: restaurant.name,
+  description: item.description,
+  partnerWants: item.partnerWants,
+});
 
 const hapticImpact = async () => {
   if (!import.meta.client) {
@@ -188,17 +234,60 @@ const selectRestaurant = (restaurantId: string) => {
   hapticImpact();
 };
 
+const openMenuItemModal = (item: MenuItem) => {
+  const restaurant = restaurants.find((currentRestaurant) =>
+    currentRestaurant.items.some((menuItem) => menuItem.id === item.id),
+  );
+
+  setModal(DateMenuItemModal, {
+    item,
+    restaurantName: restaurant?.name ?? selectedRestaurant.value.name,
+  });
+  hapticImpact();
+};
+
 const isMutualMatch = (item: MenuItem) =>
   Boolean(wants.value[item.id] && item.partnerWants);
 
 const toggleWant = (itemId: string) => {
   const item = allMenuItems.value.find((menuItem) => menuItem.id === itemId);
   wants.value[itemId] = !wants.value[itemId];
+  isMenuSent.value = false;
+  sendMenuError.value = null;
 
   if (item && isMutualMatch(item)) {
     hapticSuccess();
   } else {
     hapticImpact();
+  }
+};
+
+const sendMenuSelection = async () => {
+  if (!selectedMenuItems.value.length || isSendingMenu.value) {
+    return;
+  }
+
+  isSendingMenu.value = true;
+  sendMenuError.value = null;
+
+  try {
+    await $fetch("/api/date-menu", {
+      method: "POST",
+      body: {
+        selectedItems: selectedMenuItems.value,
+        mutualMatches: mutualMatchPayload.value,
+      },
+    });
+
+    isMenuSent.value = true;
+    hapticSuccess();
+    goToStep("matches");
+  } catch (error) {
+    sendMenuError.value =
+      error instanceof Error ? error.message : "Telegram send failed";
+    hapticImpact();
+  } finally {
+    isSendingMenu.value = false;
   }
 };
 
@@ -499,6 +588,12 @@ button {
   justify-self: center;
   background: linear-gradient(135deg, #a78bfa, #f472b6);
   box-shadow: 0 18px 42px rgba(167, 139, 250, 0.24);
+}
+
+.primary-button:disabled {
+  cursor: default;
+  opacity: 0.58;
+  box-shadow: none;
 }
 
 .section-heading {
@@ -834,17 +929,53 @@ button {
   p {
     margin-top: 7px;
     color: #b8b8c7;
+    display: -webkit-box;
+    overflow: hidden;
     font-size: 14px;
     line-height: 1.45;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
   }
 }
 
+.food-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.details-button,
 .want-button {
   width: fit-content;
   min-height: 44px;
   padding-inline: 15px;
   background: rgba(36, 36, 51, 0.82);
   border-color: rgba(196, 181, 253, 0.22);
+}
+
+.details-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(196, 181, 253, 0.18);
+  color: #f5d0fe;
+  font-weight: 850;
+  cursor: pointer;
+  transition:
+    transform 160ms ease,
+    border-color 220ms ease,
+    background 220ms ease;
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.details-button:focus-visible {
+  outline: 2px solid rgba(244, 114, 182, 0.72);
+  outline-offset: 3px;
 }
 
 .food-card--selected .want-button {
@@ -860,6 +991,23 @@ button {
   color: #fbcfe8;
   font-size: 13px;
   font-weight: 850;
+}
+
+.menu-status {
+  width: min(100%, 420px);
+  justify-self: center;
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.menu-status--error {
+  color: #fbcfe8;
+}
+
+.menu-status--success {
+  color: #c4b5fd;
 }
 
 .match-card {

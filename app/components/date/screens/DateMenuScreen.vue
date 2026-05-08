@@ -34,15 +34,25 @@
             <h3>{{ item.name }}</h3>
             <p>{{ item.description }}</p>
           </div>
-          <button
-            class="want-button"
-            type="button"
-            :aria-pressed="wants[item.id]"
-            @click="emit('toggleWant', item.id)"
-          >
-            <Icon :name="wants[item.id] ? 'lucide:check' : 'lucide:heart'" />
-            <span>Хочу</span>
-          </button>
+          <div class="food-card__actions">
+            <button
+              class="details-button"
+              type="button"
+              @click="emit('showDetails', item)"
+            >
+              <Icon name="lucide:list" />
+              <span>Подробнее</span>
+            </button>
+            <button
+              class="want-button"
+              type="button"
+              :aria-pressed="wants[item.id]"
+              @click="emit('toggleWant', item.id)"
+            >
+              <Icon :name="wants[item.id] ? 'lucide:check' : 'lucide:heart'" />
+              <span>Хочу</span>
+            </button>
+          </div>
           <div v-if="isMutualMatch(item)" class="match-label">
             <Icon name="lucide:heart" />
             <span>Вы оба хотите это</span>
@@ -51,9 +61,21 @@
       </article>
     </div>
 
-    <button class="primary-button" type="button" @click="emit('matches')">
-      <span>Сохранить и смотреть совпадения</span>
-      <Icon name="lucide:sparkles" />
+    <p v-if="sendError" class="menu-status menu-status--error">
+      Не получилось отправить выбор. Попробуй ещё раз.
+    </p>
+    <p v-else-if="isSent" class="menu-status menu-status--success">
+      Выбор отправлен.
+    </p>
+
+    <button
+      class="primary-button"
+      type="button"
+      :disabled="isSending || !selectedCount"
+      @click="emit('submit')"
+    >
+      <span>{{ buttonText }}</span>
+      <Icon :name="isSending ? 'lucide:loader-circle' : 'lucide:send'" />
     </button>
   </section>
 </template>
@@ -65,15 +87,32 @@ const props = defineProps<{
   restaurants: Restaurant[];
   selectedRestaurant: Restaurant;
   selectedRestaurantId: string;
+  selectedCount: number;
+  isSending: boolean;
+  isSent: boolean;
+  sendError: string | null;
   wants: Record<string, boolean>;
 }>();
 
 const emit = defineEmits<{
-  matches: [];
   selectRestaurant: [restaurantId: string];
+  showDetails: [item: MenuItem];
+  submit: [];
   toggleWant: [itemId: string];
 }>();
 
 const isMutualMatch = (item: MenuItem) =>
   Boolean(props.wants[item.id] && item.partnerWants);
+
+const buttonText = computed(() => {
+  if (props.isSending) {
+    return "Отправляю выбор";
+  }
+
+  if (!props.selectedCount) {
+    return "Выбери хотя бы один пункт";
+  }
+
+  return "Отправить и смотреть совпадения";
+});
 </script>

@@ -38,6 +38,18 @@ yarn dev
 bun run dev
 ```
 
+## Telegram Menu Notifications
+
+The app sends selected menu items through a Nuxt server endpoint:
+
+```bash
+TELEGRAM_BOT_TOKEN=123456:bot-token
+TELEGRAM_RECIPIENT_CHAT_ID=123456789
+```
+
+The recipient must have an existing chat with the bot. Telegram Bot API cannot
+start a private conversation with a user who has never opened the bot.
+
 ## Production
 
 Build the application for production:
