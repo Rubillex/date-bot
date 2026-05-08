@@ -239,7 +239,7 @@ onMounted(async () => {
 
 html.telegram-mini-app {
   --date-safe-top: max(
-    84px,
+    116px,
     env(safe-area-inset-top),
     var(--tg-viewport-safe-area-inset-top, 0px),
     var(--tg-viewport-content-safe-area-inset-top, 0px)
@@ -281,8 +281,16 @@ button {
   overflow-y: auto;
   overscroll-behavior-y: none;
   background:
-    radial-gradient(circle at 22% 8%, rgba(167, 139, 250, 0.22), transparent 30%),
-    radial-gradient(circle at 82% 72%, rgba(244, 114, 182, 0.16), transparent 34%),
+    radial-gradient(
+      circle at 22% 8%,
+      rgba(167, 139, 250, 0.22),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 82% 72%,
+      rgba(244, 114, 182, 0.16),
+      transparent 34%
+    ),
     #0f0f14;
 }
 
@@ -412,8 +420,10 @@ button {
   align-content: center;
   gap: 22px;
   min-height: calc(
-    var(--date-viewport-height) - var(--date-safe-top) -
-      var(--date-safe-bottom) - 76px
+    var(--date-viewport-height) - var(--date-safe-top) - var(
+        --date-safe-bottom
+      ) -
+      76px
   );
   animation: screenIn 520ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
@@ -520,7 +530,11 @@ button {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, transparent 32%, rgba(15, 15, 20, 0.74));
+    background: linear-gradient(
+      180deg,
+      transparent 32%,
+      rgba(15, 15, 20, 0.74)
+    );
   }
 
   div {
@@ -612,8 +626,10 @@ button {
 .gallery-screen {
   align-content: end;
   min-height: calc(
-    var(--date-viewport-height) - var(--date-safe-top) -
-      var(--date-safe-bottom) - 76px
+    var(--date-viewport-height) - var(--date-safe-top) - var(
+        --date-safe-bottom
+      ) -
+      76px
   );
 }
 
@@ -675,6 +691,7 @@ button {
     color: #ffffff;
     font-size: 24px;
     line-height: 1.15;
+    min-height: 2lh;
   }
 }
 
@@ -689,6 +706,8 @@ button {
     border-radius: 999px;
     background: rgba(184, 184, 199, 0.4);
     cursor: pointer;
+
+    transition: all 0.5s ease-in-out;
   }
 
   button.active {
