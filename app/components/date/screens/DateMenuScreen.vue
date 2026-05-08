@@ -52,7 +52,7 @@
     </div>
 
     <button class="primary-button" type="button" @click="emit('matches')">
-      <span>Смотреть совпадения</span>
+      <span>Сохранить и смотреть совпадения</span>
       <Icon name="lucide:sparkles" />
     </button>
   </section>
