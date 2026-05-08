@@ -12,10 +12,10 @@
 
 .app {
   min-height: 100dvh;
-  --frog-modal-overlay-background: #291e1c;
-  --frog-modal-overlay-opacity: 0.42;
-  --frog-modal-animation-duration: 0.24s;
-  --frog-modal-animation-timing: ease-out;
+  --frog-modal-overlay-background: #0f0f14;
+  --frog-modal-overlay-opacity: 0.68;
+  --frog-modal-animation-duration: 0.34s;
+  --frog-modal-animation-timing: cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 * {

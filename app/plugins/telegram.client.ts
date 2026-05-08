@@ -1,8 +1,21 @@
-import { init, viewport } from "@telegram-apps/sdk";
+import {
+  bindThemeParamsCssVars,
+  init,
+  mountThemeParamsSync,
+  viewport,
+} from "@telegram-apps/sdk";
 
 export default defineNuxtPlugin(() => {
   try {
     init();
+
+    if (mountThemeParamsSync.isAvailable()) {
+      mountThemeParamsSync();
+    }
+
+    if (bindThemeParamsCssVars.isAvailable()) {
+      bindThemeParamsCssVars();
+    }
 
     // Раскрыть приложение на весь экран
     if (viewport.mount.isAvailable()) {
