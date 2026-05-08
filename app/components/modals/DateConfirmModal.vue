@@ -18,7 +18,7 @@
     <h2>Точно хочешь увидеть?</h2>
     <p>Я старался сохранить интригу.</p>
     <div class="modal-actions">
-      <button class="ghost-button" type="button" @click="closeModal">
+      <button class="ghost-button" type="button" @click="emit('save')">
         Сохранить сюрприз
       </button>
       <button class="primary-button" type="button" @click="emit('confirm')">
@@ -31,6 +31,7 @@
 <script setup lang="ts">
 const emit = defineEmits<{
   confirm: [];
+  save: [];
 }>();
 
 const { closeModal } = useFrogModal();
@@ -43,7 +44,11 @@ const { closeModal } = useFrogModal();
   border: 1px solid rgba(196, 181, 253, 0.18);
   border-radius: 30px 30px 24px 24px;
   background:
-    radial-gradient(circle at 24% 0%, rgba(167, 139, 250, 0.24), transparent 40%),
+    radial-gradient(
+      circle at 24% 0%,
+      rgba(167, 139, 250, 0.24),
+      transparent 40%
+    ),
     #1b1b24;
   color: #ffffff;
   box-shadow: 0 26px 70px rgba(0, 0, 0, 0.42);

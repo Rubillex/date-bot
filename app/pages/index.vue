@@ -137,7 +137,11 @@ const goToStep = (step: StepId) => {
 };
 
 const goBack = () => {
-  const previousStep = steps[activeStepIndex.value - 1];
+  let previousStep = steps[activeStepIndex.value - 1];
+
+  if (previousStep == "gallery") {
+    previousStep = steps[activeStepIndex.value - 2];
+  }
 
   if (previousStep) {
     goToStep(previousStep);
@@ -149,6 +153,10 @@ const openConfirmModal = () => {
     onConfirm: () => {
       clearModals();
       goToStep("gallery");
+    },
+    onSave: () => {
+      clearModals();
+      goToStep("menu");
     },
   });
 };
@@ -597,8 +605,12 @@ button {
 .restaurant-chips {
   display: flex;
   gap: 10px;
+  margin-right: calc(var(--date-safe-right) * -1);
+  margin-left: calc(var(--date-safe-left) * -1);
   overflow-x: auto;
-  padding-bottom: 4px;
+  padding: 3px var(--date-safe-right) 8px var(--date-safe-left);
+  scroll-padding-right: var(--date-safe-right);
+  scroll-padding-left: var(--date-safe-left);
   scrollbar-width: none;
 }
 
