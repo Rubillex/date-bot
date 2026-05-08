@@ -90,11 +90,7 @@ const activeStepIndex = computed(() =>
 );
 
 const activePhoto = computed(() => placePhotos[activePhotoIndex.value]);
-const placePreview = computed(() => ({
-  src: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=82",
-  alt: "Вечернее место с теплым светом",
-  title: "Теплый свет и немного тайны",
-}));
+const placePreview = computed(() => placePhotos[0]);
 
 const selectedRestaurant = computed(
   () =>
@@ -542,6 +538,7 @@ button {
     width: 100%;
     height: 280px;
     object-fit: cover;
+    filter: blur(10px);
   }
 
   &::after {
