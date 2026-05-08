@@ -532,6 +532,7 @@ button {
 .place-media {
   position: relative;
   min-height: 280px;
+  overflow: hidden;
 
   img {
     display: block;
