@@ -123,6 +123,7 @@ const buttonText = computed(() => {
   bottom: 16px;
   left: 16px;
   right: 16px;
+  margin-inline: 16px;
 }
 
 .menu-screen {
