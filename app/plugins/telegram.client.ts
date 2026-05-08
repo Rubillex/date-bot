@@ -1,13 +1,29 @@
 import {
+  bindMiniAppCssVars,
   bindThemeParamsCssVars,
+  bindViewportCssVars,
   init,
+  isTMA,
+  miniAppReady,
+  mountMiniAppSync,
   mountThemeParamsSync,
+  setMiniAppBackgroundColor,
+  setMiniAppBottomBarColor,
+  setMiniAppHeaderColor,
   viewport,
 } from "@telegram-apps/sdk";
 
-export default defineNuxtPlugin(() => {
+export default defineNuxtPlugin(async () => {
   try {
     init();
+
+    if (isTMA()) {
+      document.documentElement.classList.add("telegram-mini-app");
+    }
+
+    if (mountMiniAppSync.isAvailable()) {
+      mountMiniAppSync();
+    }
 
     if (mountThemeParamsSync.isAvailable()) {
       mountThemeParamsSync();
@@ -17,18 +33,50 @@ export default defineNuxtPlugin(() => {
       bindThemeParamsCssVars();
     }
 
-    // Раскрыть приложение на весь экран
-    if (viewport.mount.isAvailable()) {
-      viewport.mount();
+    if (bindMiniAppCssVars.isAvailable()) {
+      bindMiniAppCssVars();
     }
 
+    if (viewport.mount.isAvailable()) {
+      await viewport.mount();
+    }
+
+    if (bindViewportCssVars.isAvailable()) {
+      bindViewportCssVars();
+    }
+
+    // Максимально раскрыть Mini App при открытии из чата.
     if (viewport.expand.isAvailable()) {
       viewport.expand();
     }
 
-    // iOS fullscreen
     if (viewport.requestFullscreen?.isAvailable?.()) {
-      viewport.requestFullscreen();
+      try {
+        await viewport.requestFullscreen();
+      } catch (error) {
+        console.warn(error);
+      }
+
+      viewport.expand.ifAvailable();
+    }
+
+    if (
+      setMiniAppHeaderColor.isAvailable() &&
+      setMiniAppHeaderColor.supports.rgb()
+    ) {
+      setMiniAppHeaderColor("#0F0F14");
+    }
+
+    if (setMiniAppBackgroundColor.isAvailable()) {
+      setMiniAppBackgroundColor("#0F0F14");
+    }
+
+    if (setMiniAppBottomBarColor.isAvailable()) {
+      setMiniAppBottomBarColor("#0F0F14");
+    }
+
+    if (miniAppReady.isAvailable()) {
+      miniAppReady();
     }
   } catch (e) {
     console.error(e);

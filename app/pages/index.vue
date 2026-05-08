@@ -7,277 +7,73 @@
     </div>
 
     <section class="shell">
-      <header class="topbar">
-        <button
-          class="icon-button"
-          type="button"
-          :disabled="activeStepIndex === 0"
-          aria-label="Назад"
-          @click="goBack"
-        >
-          <Icon name="lucide:chevron-left" />
-        </button>
-        <div class="progress">
-          <span
-            v-for="(step, index) in steps"
-            :key="step.id"
-            :class="{ active: index <= activeStepIndex }"
-          />
-        </div>
-        <button
-          class="icon-button"
-          type="button"
-          aria-label="К месту встречи"
-          @click="goToStep('place')"
-        >
-          <Icon name="lucide:map-pin" />
-        </button>
-      </header>
+      <DateTopbar
+        :active-step-index="activeStepIndex"
+        :steps="steps"
+        @back="goBack"
+        @place="goToStep('place')"
+      />
 
-      <section v-if="activeStep === 'home'" class="screen home-screen">
-        <div class="hero-copy">
-          <p class="eyebrow">личное приглашение</p>
-          <h1>У меня есть для тебя приглашение</h1>
-          <p>
-            Я кое-что подготовил. Немного интриги, немного вкусного и одно
-            место, которое тебе понравится.
-          </p>
-        </div>
-        <button class="primary-button" type="button" @click="goToStep('place')">
-          <span>Посмотреть детали</span>
-          <Icon name="lucide:arrow-right" />
-        </button>
-      </section>
+      <DateHomeScreen v-if="activeStep === 'home'" @next="goToStep('place')" />
 
-      <section v-else-if="activeStep === 'place'" class="screen place-screen">
-        <div class="section-heading">
-          <p class="eyebrow">детали вечера</p>
-          <h2>Место с тихим светом и прогулкой рядом</h2>
-          <p>
-            Встречаемся у входа. Внутри тепло и спокойно, а после можно пройтись
-            без спешки.
-          </p>
-        </div>
+      <DatePlaceScreen
+        v-else-if="activeStep === 'place'"
+        :place-preview="placePreview"
+        :recommendation-chips="recommendationChips"
+        @reveal="openConfirmModal"
+      />
 
-        <article class="place-card">
-          <div class="place-media">
-            <img :src="placePreview.src" :alt="placePreview.alt" />
-            <div>
-              <span>место</span>
-              <strong>Тихое бистро</strong>
-            </div>
-          </div>
-          <dl class="date-facts">
-            <div>
-              <dt>Дата</dt>
-              <dd>Суббота</dd>
-            </div>
-            <div>
-              <dt>Время</dt>
-              <dd>19:00</dd>
-            </div>
-            <div>
-              <dt>Адрес</dt>
-              <dd>Центр города</dd>
-            </div>
-          </dl>
-        </article>
-
-        <div class="recommendation-chips" aria-label="Рекомендации">
-          <span v-for="chip in recommendationChips" :key="chip">{{ chip }}</span>
-        </div>
-
-        <button class="primary-button" type="button" @click="openConfirmModal">
-          <span>Посмотреть фото места</span>
-          <Icon name="lucide:image" />
-        </button>
-      </section>
-
-      <section
+      <DateGalleryScreen
         v-else-if="activeStep === 'gallery'"
-        class="screen gallery-screen"
-        @touchstart.passive="onSwipeStart"
-        @touchend.passive="onSwipeEnd"
-      >
-        <div class="gallery-bg">
-          <img :src="activePhoto.src" :alt="activePhoto.alt" />
-        </div>
-        <div class="gallery-frame">
-          <img :src="activePhoto.src" :alt="activePhoto.alt" />
-          <button
-            class="gallery-arrow gallery-arrow--left"
-            type="button"
-            aria-label="Предыдущее фото"
-            @click="previousPhoto"
-          >
-            <Icon name="lucide:chevron-left" />
-          </button>
-          <button
-            class="gallery-arrow gallery-arrow--right"
-            type="button"
-            aria-label="Следующее фото"
-            @click="nextPhoto"
-          >
-            <Icon name="lucide:chevron-right" />
-          </button>
-        </div>
-        <div class="gallery-footer">
-          <div>
-            <p class="eyebrow">атмосфера</p>
-            <h2>{{ activePhoto.title }}</h2>
-          </div>
-          <div class="gallery-dots" aria-label="Фото">
-            <button
-              v-for="(photo, index) in placePhotos"
-              :key="photo.src"
-              type="button"
-              :class="{ active: activePhotoIndex === index }"
-              :aria-label="`Показать фото ${index + 1}`"
-              @click="activePhotoIndex = index"
-            />
-          </div>
-        </div>
-        <button class="primary-button" type="button" @click="goToStep('menu')">
-          <span>Перейти к меню</span>
-          <Icon name="lucide:utensils" />
-        </button>
-      </section>
+        :active-photo="activePhoto"
+        :active-photo-index="activePhotoIndex"
+        :photos="placePhotos"
+        @menu="goToStep('menu')"
+        @next="nextPhoto"
+        @previous="previousPhoto"
+        @select-photo="selectPhoto"
+      />
 
-      <section v-else-if="activeStep === 'menu'" class="screen menu-screen">
-        <div class="section-heading">
-          <p class="eyebrow">меню</p>
-          <h2>Выбери, что хочется попробовать</h2>
-          <p>
-            Если вы оба отметите одно блюдо, оно появится как совпадение.
-          </p>
-        </div>
+      <DateMenuScreen
+        v-else-if="activeStep === 'menu'"
+        :restaurants="restaurants"
+        :selected-restaurant="selectedRestaurant"
+        :selected-restaurant-id="selectedRestaurantId"
+        :wants="wants"
+        @matches="goToStep('matches')"
+        @select-restaurant="selectRestaurant"
+        @toggle-want="toggleWant"
+      />
 
-        <nav class="restaurant-chips" aria-label="Кухня">
-          <button
-            v-for="restaurant in restaurants"
-            :key="restaurant.id"
-            type="button"
-            :class="{ active: selectedRestaurantId === restaurant.id }"
-            @click="selectRestaurant(restaurant.id)"
-          >
-            {{ restaurant.name }}
-          </button>
-        </nav>
-
-        <div class="food-list">
-          <article
-            v-for="item in selectedRestaurant.items"
-            :key="item.id"
-            class="food-card"
-            :class="{
-              'food-card--selected': wants[item.id],
-              'food-card--match': isMutualMatch(item),
-            }"
-          >
-            <img :src="item.image" :alt="item.name" />
-            <div class="food-card__body">
-              <div>
-                <h3>{{ item.name }}</h3>
-                <p>{{ item.description }}</p>
-              </div>
-              <button
-                class="want-button"
-                type="button"
-                :aria-pressed="wants[item.id]"
-                @click="toggleWant(item.id)"
-              >
-                <Icon :name="wants[item.id] ? 'lucide:check' : 'lucide:heart'" />
-                <span>Хочу</span>
-              </button>
-              <div v-if="isMutualMatch(item)" class="match-label">
-                <Icon name="lucide:heart" />
-                <span>Вы оба хотите это</span>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <button class="primary-button" type="button" @click="goToStep('matches')">
-          <span>Смотреть совпадения</span>
-          <Icon name="lucide:sparkles" />
-        </button>
-      </section>
-
-      <section v-else class="screen matches-screen">
-        <div class="section-heading">
-          <p class="eyebrow">совпадения</p>
-          <h2>То, что хочется вам обоим</h2>
-          <p>
-            Здесь остаются блюда, где ваши выборы встретились.
-          </p>
-        </div>
-
-        <div v-if="mutualMatches.length" class="match-list">
-          <article
-            v-for="item in mutualMatches"
-            :key="item.id"
-            class="match-card"
-          >
-            <img :src="item.image" :alt="item.name" />
-            <div>
-              <Icon name="lucide:heart" />
-              <h3>{{ item.name }}</h3>
-              <p>{{ item.description }}</p>
-            </div>
-          </article>
-        </div>
-        <article v-else class="empty-matches">
-          <Icon name="lucide:heart-handshake" />
-          <h3>Пока нет общих выборов</h3>
-          <p>Отметь блюда в меню, чтобы увидеть совпадения.</p>
-        </article>
-
-        <button class="primary-button" type="button" @click="goToStep('menu')">
-          <span>Вернуться в меню</span>
-          <Icon name="lucide:arrow-left" />
-        </button>
-      </section>
+      <DateMatchesScreen
+        v-else
+        :mutual-matches="mutualMatches"
+        @menu="goToStep('menu')"
+      />
     </section>
   </main>
 </template>
 
 <script setup lang="ts">
+import DateTopbar from "~/components/date/DateTopbar.vue";
+import DateGalleryScreen from "~/components/date/screens/DateGalleryScreen.vue";
+import DateHomeScreen from "~/components/date/screens/DateHomeScreen.vue";
+import DateMatchesScreen from "~/components/date/screens/DateMatchesScreen.vue";
+import DateMenuScreen from "~/components/date/screens/DateMenuScreen.vue";
+import DatePlaceScreen from "~/components/date/screens/DatePlaceScreen.vue";
 import DateConfirmModal from "~/components/modals/DateConfirmModal.vue";
-
-type StepId = "home" | "place" | "gallery" | "menu" | "matches";
-
-type PlacePhoto = {
-  src: string;
-  alt: string;
-  title: string;
-};
-
-type MenuItem = {
-  id: string;
-  name: string;
-  description: string;
-  image: string;
-  partnerWants: boolean;
-};
-
-type Restaurant = {
-  id: string;
-  name: string;
-  items: MenuItem[];
-};
-
-const steps: Array<{ id: StepId; mainText: string }> = [
-  { id: "home", mainText: "Посмотреть детали" },
-  { id: "place", mainText: "Посмотреть фото места" },
-  { id: "gallery", mainText: "Перейти к меню" },
-  { id: "menu", mainText: "Смотреть совпадения" },
-  { id: "matches", mainText: "Вернуться в меню" },
-];
+import {
+  placePhotos,
+  recommendationChips,
+  restaurants,
+  steps,
+  type MenuItem,
+  type StepId,
+} from "~/data/date-invitation";
 
 const activeStep = ref<StepId>("home");
 const activePhotoIndex = ref(0);
 const selectedRestaurantId = ref("italian");
-const swipeStartX = ref<number | null>(null);
 const wants = ref<Record<string, boolean>>({
   bruschetta: false,
   pasta: false,
@@ -289,102 +85,8 @@ const wants = ref<Record<string, boolean>>({
 
 const { setModal, clearModals } = useFrogModal();
 
-const recommendationChips = [
-  "одеться удобно",
-  "вечерний стиль",
-  "обувь без каблуков",
-  "можно что-то темное",
-];
-
-const placePhotos: PlacePhoto[] = [
-  {
-    src: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=82",
-    alt: "Уютный ресторан с теплым светом",
-    title: "Теплый свет и тихие столики",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1400&q=82",
-    alt: "Столики в кафе для встречи",
-    title: "Место, где можно спокойно говорить",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1400&q=82",
-    alt: "Вечерний зал ресторана",
-    title: "Немного интриги до вечера",
-  },
-];
-
-const restaurants: Restaurant[] = [
-  {
-    id: "italian",
-    name: "Italian",
-    items: [
-      {
-        id: "bruschetta",
-        name: "Брускетта с томатами",
-        description: "Хрустящий хлеб, базилик и сладкие томаты.",
-        image:
-          "https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?auto=format&fit=crop&w=900&q=80",
-        partnerWants: true,
-      },
-      {
-        id: "pasta",
-        name: "Паста с сырным соусом",
-        description: "Нежная паста, пармезан и сливочный соус.",
-        image:
-          "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=900&q=80",
-        partnerWants: false,
-      },
-      {
-        id: "tiramisu",
-        name: "Тирамису",
-        description: "Кофейный десерт, который удобно разделить на двоих.",
-        image:
-          "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=900&q=80",
-        partnerWants: true,
-      },
-    ],
-  },
-  {
-    id: "sushi",
-    name: "Sushi",
-    items: [
-      {
-        id: "roll",
-        name: "Ролл с лососем",
-        description: "Лосось, рис, сливочный сыр и огурец.",
-        image:
-          "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=900&q=80",
-        partnerWants: true,
-      },
-      {
-        id: "mochi",
-        name: "Моти с манго",
-        description: "Мягкий десерт с фруктовой начинкой.",
-        image:
-          "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=900&q=80",
-        partnerWants: false,
-      },
-    ],
-  },
-  {
-    id: "dessert",
-    name: "Dessert",
-    items: [
-      {
-        id: "lemonade",
-        name: "Домашний лимонад",
-        description: "Цитрус, мята и легкая кислинка.",
-        image:
-          "https://images.unsplash.com/photo-1621263764928-df1444c5e859?auto=format&fit=crop&w=900&q=80",
-        partnerWants: false,
-      },
-    ],
-  },
-];
-
 const activeStepIndex = computed(() =>
-  steps.findIndex((step) => step.id === activeStep.value),
+  steps.findIndex((step) => step === activeStep.value),
 );
 
 const activePhoto = computed(() => placePhotos[activePhotoIndex.value]);
@@ -438,7 +140,7 @@ const goBack = () => {
   const previousStep = steps[activeStepIndex.value - 1];
 
   if (previousStep) {
-    goToStep(previousStep.id);
+    goToStep(previousStep);
   }
 };
 
@@ -462,28 +164,9 @@ const previousPhoto = () => {
   hapticImpact();
 };
 
-const onSwipeStart = (event: TouchEvent) => {
-  swipeStartX.value = event.changedTouches[0]?.clientX ?? null;
-};
-
-const onSwipeEnd = (event: TouchEvent) => {
-  if (swipeStartX.value === null) {
-    return;
-  }
-
-  const endX = event.changedTouches[0]?.clientX ?? swipeStartX.value;
-  const delta = endX - swipeStartX.value;
-  swipeStartX.value = null;
-
-  if (Math.abs(delta) < 42) {
-    return;
-  }
-
-  if (delta < 0) {
-    nextPhoto();
-  } else {
-    previousPhoto();
-  }
+const selectPhoto = (index: number) => {
+  activePhotoIndex.value = index;
+  hapticImpact();
 };
 
 const selectRestaurant = (restaurantId: string) => {
@@ -505,22 +188,6 @@ const toggleWant = (itemId: string) => {
   }
 };
 
-const handleMainButton = () => {
-  const currentStep = activeStep.value;
-
-  if (currentStep === "home") {
-    goToStep("place");
-  } else if (currentStep === "place") {
-    openConfirmModal();
-  } else if (currentStep === "gallery") {
-    goToStep("menu");
-  } else if (currentStep === "menu") {
-    goToStep("matches");
-  } else {
-    goToStep("menu");
-  }
-};
-
 onMounted(async () => {
   if (!import.meta.client) {
     return;
@@ -528,58 +195,69 @@ onMounted(async () => {
 
   const sdk = await import("@telegram-apps/sdk");
 
-  if (sdk.mountBackButton.isAvailable()) {
-    sdk.mountBackButton();
-    sdk.onBackButtonClick(goBack);
+  if (sdk.hideBackButton.isAvailable()) {
+    sdk.hideBackButton();
   }
 
-  if (sdk.mountMainButton.isAvailable()) {
-    sdk.mountMainButton();
-    sdk.onMainButtonClick(handleMainButton);
+  try {
+    sdk.unmountBackButton();
+    sdk.unmountMainButton();
+  } catch {
+    // Telegram controls are optional outside the Mini App environment.
   }
 });
-
-watch(
-  activeStep,
-  async () => {
-    if (!import.meta.client) {
-      return;
-    }
-
-    const sdk = await import("@telegram-apps/sdk");
-    const currentStep = steps[activeStepIndex.value];
-
-    if (sdk.setMainButtonParams.isAvailable() && currentStep) {
-      sdk.setMainButtonParams({
-        text: currentStep.mainText,
-        isVisible: true,
-        isEnabled: true,
-        isLoaderVisible: false,
-        hasShineEffect: activeStep.value === "home",
-        backgroundColor: "#A78BFA",
-        textColor: "#FFFFFF",
-      });
-    }
-
-    if (sdk.showBackButton.isAvailable() && sdk.hideBackButton.isAvailable()) {
-      if (activeStep.value === "home") {
-        sdk.hideBackButton();
-      } else {
-        sdk.showBackButton();
-      }
-    }
-  },
-  { immediate: true },
-);
 </script>
 
-<style scoped lang="scss">
-:global(html) {
+<style lang="scss">
+:root {
+  --date-viewport-height: var(--tg-viewport-stable-height, 100dvh);
+  --date-safe-top: max(
+    18px,
+    env(safe-area-inset-top),
+    var(--tg-viewport-safe-area-inset-top, 0px),
+    var(--tg-viewport-content-safe-area-inset-top, 0px)
+  );
+  --date-safe-right: max(
+    16px,
+    env(safe-area-inset-right),
+    var(--tg-viewport-safe-area-inset-right, 0px),
+    var(--tg-viewport-content-safe-area-inset-right, 0px)
+  );
+  --date-safe-bottom: max(
+    24px,
+    env(safe-area-inset-bottom),
+    var(--tg-viewport-safe-area-inset-bottom, 0px),
+    var(--tg-viewport-content-safe-area-inset-bottom, 0px)
+  );
+  --date-safe-left: max(
+    16px,
+    env(safe-area-inset-left),
+    var(--tg-viewport-safe-area-inset-left, 0px),
+    var(--tg-viewport-content-safe-area-inset-left, 0px)
+  );
+}
+
+html.telegram-mini-app {
+  --date-safe-top: max(
+    84px,
+    env(safe-area-inset-top),
+    var(--tg-viewport-safe-area-inset-top, 0px),
+    var(--tg-viewport-content-safe-area-inset-top, 0px)
+  );
+  --date-safe-bottom: max(
+    34px,
+    env(safe-area-inset-bottom),
+    var(--tg-viewport-safe-area-inset-bottom, 0px),
+    var(--tg-viewport-content-safe-area-inset-bottom, 0px)
+  );
+}
+
+html {
   background: #0f0f14;
 }
 
-:global(body) {
-  min-height: 100dvh;
+body {
+  min-height: var(--date-viewport-height);
   color: #ffffff;
   background: #0f0f14;
   font-family:
@@ -598,8 +276,10 @@ button {
 
 .date-app {
   position: relative;
-  min-height: 100dvh;
-  overflow: hidden;
+  min-height: var(--date-viewport-height);
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior-y: none;
   background:
     radial-gradient(circle at 22% 8%, rgba(167, 139, 250, 0.22), transparent 30%),
     radial-gradient(circle at 82% 72%, rgba(244, 114, 182, 0.16), transparent 34%),
@@ -662,10 +342,10 @@ button {
   z-index: 1;
   display: grid;
   width: min(100%, 760px);
-  min-height: 100dvh;
+  min-height: var(--date-viewport-height);
   margin: 0 auto;
-  padding: max(18px, env(safe-area-inset-top)) 16px
-    max(24px, env(safe-area-inset-bottom));
+  padding: var(--date-safe-top) var(--date-safe-right) var(--date-safe-bottom)
+    var(--date-safe-left);
 }
 
 .topbar {
@@ -731,7 +411,10 @@ button {
   display: grid;
   align-content: center;
   gap: 22px;
-  min-height: calc(100dvh - 76px);
+  min-height: calc(
+    var(--date-viewport-height) - var(--date-safe-top) -
+      var(--date-safe-bottom) - 76px
+  );
   animation: screenIn 520ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
@@ -928,7 +611,10 @@ button {
 
 .gallery-screen {
   align-content: end;
-  min-height: calc(100dvh - 76px);
+  min-height: calc(
+    var(--date-viewport-height) - var(--date-safe-top) -
+      var(--date-safe-bottom) - 76px
+  );
 }
 
 .gallery-bg {
@@ -1257,8 +943,24 @@ button {
 }
 
 @media (max-width: 560px) {
+  :root {
+    --date-safe-right: max(
+      12px,
+      env(safe-area-inset-right),
+      var(--tg-viewport-safe-area-inset-right, 0px),
+      var(--tg-viewport-content-safe-area-inset-right, 0px)
+    );
+    --date-safe-left: max(
+      12px,
+      env(safe-area-inset-left),
+      var(--tg-viewport-safe-area-inset-left, 0px),
+      var(--tg-viewport-content-safe-area-inset-left, 0px)
+    );
+  }
+
   .shell {
-    padding-inline: 12px;
+    padding-right: var(--date-safe-right);
+    padding-left: var(--date-safe-left);
   }
 
   .screen {
