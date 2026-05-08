@@ -90,7 +90,7 @@ const activeStepIndex = computed(() =>
 );
 
 const activePhoto = computed(() => placePhotos[activePhotoIndex.value]);
-const placePreview = computed(() => placePhotos[1]);
+const placePreview = computed(() => placePhotos[0]);
 
 const selectedRestaurant = computed(
   () =>
