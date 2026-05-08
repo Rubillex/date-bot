@@ -119,13 +119,14 @@ const buttonText = computed(() => {
 
 <style lang="scss">
 .floating-button {
-  position: sticky;
-  bottom: 0;
+  position: fixed;
+  bottom: 16px;
   left: 0;
   right: 0;
 }
 
 .menu-screen {
   position: relative;
+  padding-bottom: 80px;
 }
 </style>
