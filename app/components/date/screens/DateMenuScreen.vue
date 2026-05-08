@@ -116,19 +116,3 @@ const buttonText = computed(() => {
   return "Соханить смотреть совпадения";
 });
 </script>
-
-<style lang="scss">
-.floating-button {
-  position: fixed;
-  bottom: 16px;
-  left: 0;
-  right: 0;
-  margin-inline: 16px;
-  width: calc(100vw - 32px);
-}
-
-.menu-screen {
-  position: relative;
-  padding-bottom: 80px;
-}
-</style>
