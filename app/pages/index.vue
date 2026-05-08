@@ -90,7 +90,11 @@ const activeStepIndex = computed(() =>
 );
 
 const activePhoto = computed(() => placePhotos[activePhotoIndex.value]);
-const placePreview = computed(() => placePhotos[0]);
+const placePreview = computed(() => ({
+  src: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=82",
+  alt: "Вечернее место с теплым светом",
+  title: "Теплый свет и немного тайны",
+}));
 
 const selectedRestaurant = computed(
   () =>
@@ -133,6 +137,12 @@ const hapticSuccess = async () => {
 
 const goToStep = (step: StepId) => {
   activeStep.value = step;
+  if (import.meta.client) {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
   hapticImpact();
 };
 
