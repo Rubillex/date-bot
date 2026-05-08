@@ -26,24 +26,24 @@ export const recommendationChips = [
   "одеться удобно",
   "вечерний стиль",
   "обувь без каблуков",
-  "можно что-то темное",
+  "что-то для красивого вечера",
 ];
 
 export const placePhotos: PlacePhoto[] = [
   {
     src: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=82",
-    alt: "Уютный ресторан с теплым светом",
-    title: "Теплый свет и тихие столики",
+    alt: "Вечернее место с теплым светом",
+    title: "Теплый свет и немного тайны",
   },
   {
     src: "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1400&q=82",
-    alt: "Столики в кафе для встречи",
+    alt: "Атмосферное место для встречи",
     title: "Место, где можно спокойно говорить",
   },
   {
     src: "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1400&q=82",
-    alt: "Вечерний зал ресторана",
-    title: "Немного интриги до вечера",
+    alt: "Вечерняя атмосфера с мягким светом",
+    title: "Остальное лучше увидеть лично",
   },
 ];
 

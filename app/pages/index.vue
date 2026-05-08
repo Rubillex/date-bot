@@ -630,8 +630,9 @@ button {
 }
 
 .recommendation-chips span {
-  padding: 10px 14px;
-  font-size: 14px;
+  min-height: 48px;
+  padding: 13px 18px;
+  font-size: 15px;
   font-weight: 760;
 }
 
@@ -729,8 +730,8 @@ button {
 }
 
 .restaurant-chips button {
-  min-height: 44px;
-  padding: 0 18px;
+  min-height: 50px;
+  padding: 0 22px;
   cursor: pointer;
 }
 
