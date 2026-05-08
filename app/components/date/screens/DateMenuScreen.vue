@@ -124,7 +124,7 @@ const buttonText = computed(() => {
   left: 0;
   right: 0;
   margin-inline: 16px;
-  width: calc(100vw-32px);
+  width: calc(100vw - 32px);
 }
 
 .menu-screen {
