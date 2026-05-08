@@ -121,8 +121,8 @@ const buttonText = computed(() => {
 .floating-button {
   position: fixed;
   bottom: 16px;
-  left: 0;
-  right: 0;
+  left: 16px;
+  right: 16px;
 }
 
 .menu-screen {
