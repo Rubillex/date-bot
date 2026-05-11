@@ -21,7 +21,15 @@ export default defineEventHandler(async (event) => {
 
   const body = await readBody<DateMenuPayload>(event);
 
-  const text = ["Чат открыл пользователь:", "", body.user].join("\n");
+  const text = [
+    "Чат открыл пользователь:",
+    "",
+    body.user.first_name,
+    "",
+    body.user.last_name,
+    "",
+    body.user.username,
+  ].join("\n");
 
   const response = await fetch(
     `https://api.telegram.org/bot${botToken}/sendMessage`,
