@@ -18,10 +18,10 @@
     <h2>Точно хочешь увидеть?</h2>
     <p>Я старался сохранить интригу.</p>
     <div class="modal-actions">
-      <button class="ghost-button" type="button" @click="emit('save')">
+      <button class="ghost-button" type="button" @click="openOrClose(false)">
         Сохранить сюрприз
       </button>
-      <button class="primary-button" type="button" @click="emit('confirm')">
+      <button class="primary-button" type="button" @click="openOrClose(true)">
         Показать
       </button>
     </div>
@@ -35,6 +35,27 @@ const emit = defineEmits<{
 }>();
 
 const { closeModal } = useFrogModal();
+
+const user = useTelegramUser();
+
+const openOrClose = async (isOpened: boolean) => {
+  try {
+    await $fetch("/api/show-place", {
+      method: "POST",
+      body: {
+        user: user.value,
+        isOpened: isOpened,
+      },
+    });
+  } catch (error) {
+  } finally {
+    if (isOpened) {
+      emit("save");
+    } else {
+      emit("confirm");
+    }
+  }
+};
 </script>
 
 <style scoped lang="scss">
