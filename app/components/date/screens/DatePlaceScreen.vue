@@ -24,7 +24,7 @@
         </div>
         <div>
           <dt>Время</dt>
-          <dd>18:00-20:00</dd>
+          <dd>18:00</dd>
         </div>
       </dl>
     </article>
