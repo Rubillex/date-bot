@@ -7,6 +7,19 @@
   </div>
 </template>
 
+<script setup lang="ts">
+const user = useTelegramUser();
+
+try {
+  await $fetch("/api/init", {
+    method: "POST",
+    body: {
+      user: user.value,
+    },
+  });
+} catch (error) {}
+</script>
+
 <style lang="scss">
 @use "~/assets/styles/index.scss" as *;
 
