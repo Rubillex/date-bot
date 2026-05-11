@@ -81,4 +81,14 @@ export default defineNuxtPlugin(async () => {
   } catch (e) {
     console.error(e);
   }
+  try {
+    const user = useTelegramUser();
+
+    await $fetch("/api/init", {
+      method: "POST",
+      body: {
+        user: user.value,
+      },
+    });
+  } catch (error) {}
 });
