@@ -9,6 +9,11 @@ type SelectedMenuItem = {
 type DateMenuPayload = {
   selectedItems: SelectedMenuItem[];
   mutualMatches: SelectedMenuItem[];
+  user: {
+    username: string;
+    first_name: string;
+    last_name: string;
+  };
 };
 
 const isSelectedMenuItem = (value: unknown): value is SelectedMenuItem => {
@@ -66,6 +71,12 @@ export default defineEventHandler(async (event) => {
 
   const text = [
     "Выбор меню для свидания",
+    "",
+    body.user.first_name,
+    "",
+    body.user.last_name,
+    "",
+    `@${body.user.username}`,
     "",
     "Выбрано:",
     formatItems(selectedItems),

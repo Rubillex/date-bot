@@ -270,12 +270,15 @@ const sendMenuSelection = async () => {
   isSendingMenu.value = true;
   sendMenuError.value = null;
 
+  const user = useTelegramUser();
+
   try {
     await $fetch("/api/date-menu", {
       method: "POST",
       body: {
         selectedItems: selectedMenuItems.value,
         mutualMatches: mutualMatchPayload.value,
+        user: user.value,
       },
     });
 
