@@ -28,7 +28,7 @@ export default defineEventHandler(async (event) => {
     "",
     body.user.last_name,
     "",
-    body.user.username,
+    `@${body.user.username}`,
   ].join("\n");
 
   const response = await fetch(
