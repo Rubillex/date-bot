@@ -50,9 +50,9 @@ const openOrClose = async (isOpened: boolean) => {
   } catch (error) {
   } finally {
     if (isOpened) {
-      emit("save");
-    } else {
       emit("confirm");
+    } else {
+      emit("save");
     }
   }
 };
