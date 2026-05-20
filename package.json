@@ -7,15 +7,23 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:push": "prisma db push",
     "start": "node .output/server/index.mjs",
-    "postinstall": "nuxt prepare"
+    "postinstall": "prisma generate && nuxt prepare"
   },
   "dependencies": {
     "@nuxt/fonts": "^0.14.0",
     "@nuxt/icon": "^2.2.2",
     "@nuxt/image": "^2.0.0",
+    "@prisma/adapter-pg": "^7.8.0",
+    "@prisma/client": "^7.8.0",
     "@telegram-apps/sdk": "^3.11.8",
+    "dotenv": "^17.4.2",
     "nuxt": "^4.4.4",
+    "pg": "^8.21.0",
+    "prisma": "^7.8.0",
     "rubillex_frog-modal": "^1.4.5",
     "vue": "^3.5.33",
     "vue-router": "^5.0.6"

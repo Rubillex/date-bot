@@ -3,7 +3,7 @@ type DateMenuPayload = {
     username: string;
     first_name: string;
     last_name: string;
-  };
+  } | null;
 };
 
 export default defineEventHandler(async (event) => {
@@ -20,15 +20,20 @@ export default defineEventHandler(async (event) => {
   }
 
   const body = await readBody<DateMenuPayload>(event);
+  const user = body.user ?? {
+    username: "unknown",
+    first_name: "unknown",
+    last_name: "",
+  };
 
   const text = [
     "Чат открыл пользователь:",
     "",
-    body.user.first_name,
+    user.first_name,
     "",
-    body.user.last_name,
+    user.last_name,
     "",
-    `@${body.user.username}`,
+    `@${user.username}`,
   ].join("\n");
 
   const response = await fetch(

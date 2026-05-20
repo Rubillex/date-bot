@@ -1,0 +1,15 @@
+.data
+.env
+.env.*
+.git
+.idea
+.nuxt
+.output
+.cache
+dist
+logs
+node_modules
+server/generated
+public/uploads
+*.log
+.DS_Store

@@ -28,7 +28,7 @@
     </div>
     <div class="gallery-footer">
       <div>
-        <p class="eyebrow">атмосфера</p>
+        <p class="eyebrow">{{ eyebrow }}</p>
         <h2>{{ activePhoto.title }}</h2>
       </div>
       <div class="gallery-dots" aria-label="Фото">
@@ -43,7 +43,7 @@
       </div>
     </div>
     <button class="primary-button" type="button" @click="emit('menu')">
-      <span>Перейти к меню</span>
+      <span>{{ buttonText }}</span>
       <Icon name="lucide:utensils" />
     </button>
   </section>
@@ -55,6 +55,8 @@ import type { PlacePhoto } from "~/data/date-invitation";
 defineProps<{
   activePhoto: PlacePhoto;
   activePhotoIndex: number;
+  buttonText: string;
+  eyebrow: string;
   photos: PlacePhoto[];
 }>();
 

@@ -1,0 +1,43 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client"
+  output   = "../server/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Invitation {
+  id                  String   @id @default(cuid())
+  code                String   @unique
+  homeEyebrow         String
+  homeTitle           String
+  homeText            String
+  placeEyebrow        String
+  placeTitle          String
+  placeText           String
+  placeName           String
+  dateText            String
+  timeText            String
+  galleryEyebrow      String
+  galleryButtonText   String
+  menuEyebrow         String
+  menuTitle           String
+  menuText            String
+  matchesEyebrow      String
+  matchesTitle        String
+  matchesText         String
+  matchesEmptyTitle   String
+  matchesEmptyText    String
+  recommendationChips Json
+  placePhotos         Json
+  restaurants         Json
+  lastOpenedAt        DateTime @default(now())
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+}

@@ -1,9 +1,9 @@
 <template>
   <section class="screen menu-screen">
     <div class="section-heading">
-      <p class="eyebrow">меню</p>
-      <h2>Выбери, что хочется попробовать</h2>
-      <p>Если мы оба отметим одно блюдо, оно появится как совпадение.</p>
+      <p class="eyebrow">{{ content.eyebrow }}</p>
+      <h2>{{ content.title }}</h2>
+      <p>{{ content.text }}</p>
     </div>
 
     <nav class="restaurant-chips" aria-label="Кухня">
@@ -81,9 +81,14 @@
 </template>
 
 <script setup lang="ts">
-import type { MenuItem, Restaurant } from "~/data/date-invitation";
+import type {
+  InvitationCopy,
+  MenuItem,
+  Restaurant,
+} from "~/data/date-invitation";
 
 const props = defineProps<{
+  content: InvitationCopy;
   restaurants: Restaurant[];
   selectedRestaurant: Restaurant;
   selectedRestaurantId: string;

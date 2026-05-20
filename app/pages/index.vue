@@ -6,7 +6,7 @@
       <span v-for="particle in 14" :key="particle" />
     </div>
 
-    <section class="shell">
+    <section v-if="invitation" class="shell">
       <DateTopbar
         :active-step-index="activeStepIndex"
         :steps="steps"
@@ -14,12 +14,17 @@
         @place="goToStep('place')"
       />
 
-      <DateHomeScreen v-if="activeStep === 'home'" @next="goToStep('place')" />
+      <DateHomeScreen
+        v-if="activeStep === 'home'"
+        :content="invitation.home"
+        @next="goToStep('place')"
+      />
 
       <DatePlaceScreen
         v-else-if="activeStep === 'place'"
+        :content="invitation.place"
         :place-preview="placePreview"
-        :recommendation-chips="recommendationChips"
+        :recommendation-chips="invitation.recommendationChips"
         @reveal="openConfirmModal"
       />
 
@@ -27,6 +32,8 @@
         v-else-if="activeStep === 'gallery'"
         :active-photo="activePhoto"
         :active-photo-index="activePhotoIndex"
+        :button-text="invitation.gallery.buttonText"
+        :eyebrow="invitation.gallery.eyebrow"
         :photos="placePhotos"
         @menu="goToStep('menu')"
         @next="nextPhoto"
@@ -38,6 +45,7 @@
         v-else-if="activeStep === 'menu'"
         :is-sending="isSendingMenu"
         :is-sent="isMenuSent"
+        :content="invitation.menu"
         :restaurants="restaurants"
         :send-error="sendMenuError"
         :selected-count="selectedMenuItems.length"
@@ -52,10 +60,36 @@
 
       <DateMatchesScreen
         v-else
+        :content="invitation.matches"
         :mutual-matches="mutualMatches"
         @menu="goToStep('menu')"
       />
     </section>
+
+    <div v-if="showCodeModal" class="code-modal" role="dialog" aria-modal="true">
+      <form class="code-modal__panel" @submit.prevent="openInvitationCode">
+        <p class="eyebrow">код приглашения</p>
+        <h1>Введите код</h1>
+        <p>Приглашение откроется только после загрузки данных из базы.</p>
+        <label for="invitation-code">Код</label>
+        <input
+          id="invitation-code"
+          v-model.trim="invitationCodeInput"
+          autofocus
+          autocomplete="off"
+          placeholder="Например: HCWRCQ"
+          type="text"
+        />
+        <p v-if="loadError" class="code-modal__error">{{ loadError }}</p>
+        <button class="primary-button" type="submit" :disabled="isLoadingInvitation">
+          <span>{{ isLoadingInvitation ? "Проверяю код" : "Открыть" }}</span>
+          <Icon
+            :name="isLoadingInvitation ? 'lucide:loader-circle' : 'lucide:key-round'"
+          />
+        </button>
+        <NuxtLink to="/create">Создать своё приглашение</NuxtLink>
+      </form>
+    </div>
   </main>
 </template>
 
@@ -69,10 +103,8 @@ import DatePlaceScreen from "~/components/date/screens/DatePlaceScreen.vue";
 import DateConfirmModal from "~/components/modals/DateConfirmModal.vue";
 import DateMenuItemModal from "~/components/modals/DateMenuItemModal.vue";
 import {
-  placePhotos,
-  recommendationChips,
-  restaurants,
   steps,
+  type InvitationContent,
   type MenuItem,
   type Restaurant,
   type StepId,
@@ -88,19 +120,41 @@ type SelectedMenuItemPayload = {
 
 const activeStep = ref<StepId>("home");
 const activePhotoIndex = ref(0);
-const selectedRestaurantId = ref(restaurants[0]?.id ?? "");
+const route = useRoute();
+const router = useRouter();
+const invitation = ref<InvitationContent | null>(null);
+const invitationCodeInput = ref("");
+const loadError = ref<string | null>(null);
+const isLoadingInvitation = ref(false);
 const isSendingMenu = ref(false);
 const isMenuSent = ref(false);
 const sendMenuError = ref<string | null>(null);
-const wants = ref<Record<string, boolean>>(
-  restaurants.reduce<Record<string, boolean>>((accumulator, restaurant) => {
+const selectedRestaurantId = ref("");
+const wants = ref<Record<string, boolean>>({});
+
+const showCodeModal = computed(
+  () => !invitation.value || Boolean(loadError.value),
+);
+
+const placePhotos = computed(() => invitation.value?.placePhotos ?? []);
+const restaurants = computed(() => invitation.value?.restaurants ?? []);
+
+const createWantsState = (source: Restaurant[]) =>
+  source.reduce<Record<string, boolean>>((accumulator, restaurant) => {
     restaurant.items.forEach((item) => {
       accumulator[item.id] = false;
     });
 
     return accumulator;
-  }, {}),
-);
+  }, {});
+
+const applyInvitation = (content: InvitationContent) => {
+  invitation.value = content;
+  selectedRestaurantId.value = content.restaurants[0]?.id ?? "";
+  wants.value = createWantsState(content.restaurants);
+  activePhotoIndex.value = 0;
+  activeStep.value = "home";
+};
 
 const { setModal, clearModals } = useFrogModal();
 
@@ -108,18 +162,18 @@ const activeStepIndex = computed(() =>
   steps.findIndex((step) => step === activeStep.value),
 );
 
-const activePhoto = computed(() => placePhotos[activePhotoIndex.value]);
-const placePreview = computed(() => placePhotos[0]);
+const activePhoto = computed(() => placePhotos.value[activePhotoIndex.value]);
+const placePreview = computed(() => placePhotos.value[0]);
 
 const selectedRestaurant = computed(
   () =>
-    restaurants.find(
+    restaurants.value.find(
       (restaurant) => restaurant.id === selectedRestaurantId.value,
-    ) ?? restaurants[0],
+    ) ?? restaurants.value[0],
 );
 
 const allMenuItems = computed(() =>
-  restaurants.flatMap((restaurant) => restaurant.items),
+  restaurants.value.flatMap((restaurant) => restaurant.items),
 );
 
 const mutualMatches = computed(() =>
@@ -127,7 +181,7 @@ const mutualMatches = computed(() =>
 );
 
 const selectedMenuItems = computed(() =>
-  restaurants.flatMap((restaurant) =>
+  restaurants.value.flatMap((restaurant) =>
     restaurant.items
       .filter((item) => wants.value[item.id])
       .map((item) => toSelectedMenuItemPayload(item, restaurant)),
@@ -135,7 +189,7 @@ const selectedMenuItems = computed(() =>
 );
 
 const mutualMatchPayload = computed(() =>
-  restaurants.flatMap((restaurant) =>
+  restaurants.value.flatMap((restaurant) =>
     restaurant.items
       .filter((item) => isMutualMatch(item))
       .map((item) => toSelectedMenuItemPayload(item, restaurant)),
@@ -214,13 +268,23 @@ const openConfirmModal = () => {
 };
 
 const nextPhoto = () => {
-  activePhotoIndex.value = (activePhotoIndex.value + 1) % placePhotos.length;
+  if (!placePhotos.value.length) {
+    return;
+  }
+
+  activePhotoIndex.value =
+    (activePhotoIndex.value + 1) % placePhotos.value.length;
   hapticImpact();
 };
 
 const previousPhoto = () => {
+  if (!placePhotos.value.length) {
+    return;
+  }
+
   activePhotoIndex.value =
-    (activePhotoIndex.value - 1 + placePhotos.length) % placePhotos.length;
+    (activePhotoIndex.value - 1 + placePhotos.value.length) %
+    placePhotos.value.length;
   hapticImpact();
 };
 
@@ -235,7 +299,7 @@ const selectRestaurant = (restaurantId: string) => {
 };
 
 const openMenuItemModal = (item: MenuItem) => {
-  const restaurant = restaurants.find((currentRestaurant) =>
+  const restaurant = restaurants.value.find((currentRestaurant) =>
     currentRestaurant.items.some((menuItem) => menuItem.id === item.id),
   );
 
@@ -260,6 +324,48 @@ const toggleWant = (itemId: string) => {
   } else {
     hapticImpact();
   }
+};
+
+const loadInvitationByCode = async (code: string) => {
+  if (!code) {
+    return;
+  }
+
+  isLoadingInvitation.value = true;
+  loadError.value = null;
+  invitation.value = null;
+
+  try {
+    const response = await $fetch<InvitationContent>(
+      `/api/invitations/${encodeURIComponent(code.toUpperCase())}`,
+    );
+    applyInvitation(response);
+    invitationCodeInput.value = response.code ?? code;
+  } catch {
+    loadError.value = "Приглашение с таким кодом не найдено.";
+  } finally {
+    isLoadingInvitation.value = false;
+  }
+};
+
+const openInvitationCode = async () => {
+  if (!invitationCodeInput.value) {
+    return;
+  }
+
+  const code = invitationCodeInput.value.toUpperCase();
+
+  if (route.query.code === code) {
+    await loadInvitationByCode(code);
+    return;
+  }
+
+  await router.push({
+    path: "/",
+    query: {
+      code,
+    },
+  });
 };
 
 const sendMenuSelection = async () => {
@@ -312,6 +418,22 @@ onMounted(async () => {
     // Telegram controls are optional outside the Mini App environment.
   }
 });
+
+if (import.meta.client) {
+  watch(
+    () => route.query.code,
+    (code) => {
+      if (typeof code === "string") {
+        loadInvitationByCode(code);
+        return;
+      }
+
+      invitation.value = null;
+      loadError.value = null;
+    },
+    { immediate: true },
+  );
+}
 </script>
 
 <style lang="scss">
@@ -519,6 +641,79 @@ button {
 .progress span.active {
   background: linear-gradient(90deg, #a78bfa, #f472b6);
   box-shadow: 0 0 18px rgba(167, 139, 250, 0.42);
+}
+
+.code-modal {
+  position: fixed;
+  z-index: 20;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: var(--date-safe-top) var(--date-safe-right) var(--date-safe-bottom)
+    var(--date-safe-left);
+  background: rgba(15, 15, 20, 0.78);
+  backdrop-filter: blur(18px);
+}
+
+.code-modal__panel {
+  display: grid;
+  width: min(100%, 420px);
+  gap: 14px;
+  border: 1px solid rgba(196, 181, 253, 0.2);
+  border-radius: 8px;
+  padding: 22px;
+  background: rgba(24, 24, 34, 0.94);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+}
+
+.code-modal__panel h1 {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.code-modal__panel p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.74);
+  line-height: 1.55;
+}
+
+.code-modal__panel label {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.code-modal__panel input {
+  min-height: 48px;
+  border: 1px solid rgba(196, 181, 253, 0.2);
+  border-radius: 8px;
+  padding: 0 14px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  font: inherit;
+  text-transform: uppercase;
+}
+
+.code-modal__panel .primary-button {
+  width: 100%;
+}
+
+.code-modal__panel a {
+  justify-self: center;
+  color: #fbcfe8;
+  text-decoration: none;
+}
+
+.code-modal__error {
+  color: #fecaca !important;
+  font-size: 13px;
 }
 
 .screen {

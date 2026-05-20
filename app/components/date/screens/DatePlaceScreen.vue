@@ -1,12 +1,9 @@
 <template>
   <section class="screen place-screen">
     <div class="section-heading">
-      <p class="eyebrow">детали вечера</p>
-      <h2>Место, где вечер становится чуть выше обычного</h2>
-      <p>
-        Я выбрал точку, где можно спокойно поговорить, вкусно поужинать и
-        оставить главное в секрете до последнего момента.
-      </p>
+      <p class="eyebrow">{{ content.eyebrow }}</p>
+      <h2>{{ content.title }}</h2>
+      <p>{{ content.text }}</p>
     </div>
 
     <article class="place-card">
@@ -14,17 +11,17 @@
         <img :src="placePreview.src" :alt="placePreview.alt" />
         <div>
           <span>место</span>
-          <strong>Секретная точка вечера</strong>
+          <strong>{{ content.placeName }}</strong>
         </div>
       </div>
       <dl class="date-facts">
         <div>
           <dt>Дата</dt>
-          <dd>На выходных или на недельке</dd>
+          <dd>{{ content.dateText }}</dd>
         </div>
         <div>
           <dt>Время</dt>
-          <dd>18:00</dd>
+          <dd>{{ content.timeText }}</dd>
         </div>
       </dl>
     </article>
@@ -41,9 +38,10 @@
 </template>
 
 <script setup lang="ts">
-import type { PlacePhoto } from "~/data/date-invitation";
+import type { PlaceDetails, PlacePhoto } from "~/data/date-invitation";
 
 defineProps<{
+  content: PlaceDetails;
   placePreview: PlacePhoto;
   recommendationChips: string[];
 }>();

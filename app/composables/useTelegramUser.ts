@@ -1,7 +1,11 @@
 import { retrieveLaunchParams } from "@telegram-apps/sdk";
 
 export const useTelegramUser = () => {
-  const { tgWebAppData } = retrieveLaunchParams();
+  let tgData = null;
+  try {
+    const { tgWebAppData } = retrieveLaunchParams();
+    tgData = tgWebAppData;
+  } catch (e) {}
 
-  return computed(() => tgWebAppData?.user ?? null);
+  return computed(() => tgData?.user ?? null);
 };

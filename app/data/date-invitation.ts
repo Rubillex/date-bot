@@ -20,6 +20,36 @@ export type Restaurant = {
   items: MenuItem[];
 };
 
+export type InvitationCopy = {
+  eyebrow: string;
+  title: string;
+  text: string;
+};
+
+export type PlaceDetails = InvitationCopy & {
+  placeName: string;
+  dateText: string;
+  timeText: string;
+};
+
+export type InvitationContent = {
+  code?: string;
+  home: InvitationCopy;
+  place: PlaceDetails;
+  gallery: {
+    eyebrow: string;
+    buttonText: string;
+  };
+  menu: InvitationCopy;
+  matches: InvitationCopy & {
+    emptyTitle: string;
+    emptyText: string;
+  };
+  recommendationChips: string[];
+  placePhotos: PlacePhoto[];
+  restaurants: Restaurant[];
+};
+
 export const steps: StepId[] = ["home", "place", "gallery", "menu", "matches"];
 
 export const recommendationChips = [
@@ -1223,3 +1253,38 @@ export const restaurants: Restaurant[] = [
     ],
   },
 ];
+
+export const defaultInvitationContent: InvitationContent = {
+  home: {
+    eyebrow: "личное приглашение",
+    title: "У меня есть для тебя приглашение",
+    text: "Я кое-что подготовил. Немного интриги, красивый вечер и одно место, которое лучше раскрывать постепенно.",
+  },
+  place: {
+    eyebrow: "детали вечера",
+    title: "Место, где вечер становится чуть выше обычного",
+    text: "Я выбрал точку, где можно спокойно поговорить, вкусно поужинать и оставить главное в секрете до последнего момента.",
+    placeName: "Секретная точка вечера",
+    dateText: "На выходных или на недельке",
+    timeText: "18:00",
+  },
+  gallery: {
+    eyebrow: "атмосфера",
+    buttonText: "Перейти к меню",
+  },
+  menu: {
+    eyebrow: "меню",
+    title: "Выбери, что хочется попробовать",
+    text: "Если мы оба отметим одно блюдо, оно появится как совпадение.",
+  },
+  matches: {
+    eyebrow: "совпадения",
+    title: "То, что хочется вам обоим",
+    text: "Здесь остаются блюда, где ваши выборы встретились.",
+    emptyTitle: "Пока нет общих выборов",
+    emptyText: "Отметь блюда в меню, чтобы увидеть совпадения.",
+  },
+  recommendationChips,
+  placePhotos,
+  restaurants,
+};

@@ -1,9 +1,9 @@
 <template>
   <section class="screen matches-screen">
     <div class="section-heading">
-      <p class="eyebrow">совпадения</p>
-      <h2>То, что хочется вам обоим</h2>
-      <p>Здесь остаются блюда, где ваши выборы встретились.</p>
+      <p class="eyebrow">{{ content.eyebrow }}</p>
+      <h2>{{ content.title }}</h2>
+      <p>{{ content.text }}</p>
     </div>
 
     <div v-if="mutualMatches.length" class="match-list">
@@ -18,8 +18,8 @@
     </div>
     <article v-else class="empty-matches">
       <Icon name="lucide:heart-handshake" />
-      <h3>Пока нет общих выборов</h3>
-      <p>Отметь блюда в меню, чтобы увидеть совпадения.</p>
+      <h3>{{ content.emptyTitle }}</h3>
+      <p>{{ content.emptyText }}</p>
     </article>
 
     <button class="primary-button" type="button" @click="emit('menu')">
@@ -30,9 +30,10 @@
 </template>
 
 <script setup lang="ts">
-import type { MenuItem } from "~/data/date-invitation";
+import type { InvitationContent, MenuItem } from "~/data/date-invitation";
 
 defineProps<{
+  content: InvitationContent["matches"];
   mutualMatches: MenuItem[];
 }>();
 

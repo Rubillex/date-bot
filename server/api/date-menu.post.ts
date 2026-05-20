@@ -13,7 +13,7 @@ type DateMenuPayload = {
     username: string;
     first_name: string;
     last_name: string;
-  };
+  } | null;
 };
 
 const isSelectedMenuItem = (value: unknown): value is SelectedMenuItem => {
@@ -61,6 +61,11 @@ export default defineEventHandler(async (event) => {
   const mutualMatches = Array.isArray(body?.mutualMatches)
     ? body.mutualMatches.filter(isSelectedMenuItem)
     : [];
+  const user = body.user ?? {
+    username: "unknown",
+    first_name: "unknown",
+    last_name: "",
+  };
 
   if (!selectedItems.length) {
     throw createError({
@@ -72,11 +77,11 @@ export default defineEventHandler(async (event) => {
   const text = [
     "Выбор меню для свидания",
     "",
-    body.user.first_name,
+    user.first_name,
     "",
-    body.user.last_name,
+    user.last_name,
     "",
-    `@${body.user.username}`,
+    `@${user.username}`,
     "",
     "Выбрано:",
     formatItems(selectedItems),

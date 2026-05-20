@@ -1,12 +1,9 @@
 <template>
   <section class="screen home-screen">
     <div class="hero-copy">
-      <p class="eyebrow">личное приглашение</p>
-      <h1>У меня есть для тебя приглашение</h1>
-      <p>
-        Я кое-что подготовил. Немного интриги, красивый вечер и одно место,
-        которое лучше раскрывать постепенно.
-      </p>
+      <p class="eyebrow">{{ content.eyebrow }}</p>
+      <h1>{{ content.title }}</h1>
+      <p>{{ content.text }}</p>
     </div>
     <button class="primary-button" type="button" @click="emit('next')">
       <span>Посмотреть детали</span>
@@ -16,6 +13,12 @@
 </template>
 
 <script setup lang="ts">
+import type { InvitationCopy } from "~/data/date-invitation";
+
+defineProps<{
+  content: InvitationCopy;
+}>();
+
 const emit = defineEmits<{
   next: [];
 }>();
